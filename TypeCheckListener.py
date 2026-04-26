@@ -147,15 +147,12 @@ class TypeCheckListener(ParseTreeListener):
 
     # Exit a parse tree produced by ProjectGrammarParser#negation.
     def exitNegation(self, ctx:ProjectGrammarParser.NegationContext):
-        expr_type = self.types_table[ctx.expr().getText()]
+        expr_type = self.nodes_table.get(ctx.expr())  
 
-        if not expr_type.isNumeric():
-            self.addError(ctx, 'Negation can not be done on non numeral expression')
-
-        value = int(-1 * self.nodes_values[ctx.expr()] ) if expr_type == Type.INT else float(-1 * self.nodes_values[ctx.expr()] )
+        if expr_type not in (Type.INT, Type.FLOAT):
+            self.addError(ctx, 'Negation can only be applied to numeric expressions.')
 
         self.nodes_table[ctx] = expr_type
-        self.nodes_values[ctx] = value
 
 
     # Enter a parse tree produced by ProjectGrammarParser#parens.
@@ -241,7 +238,7 @@ class TypeCheckListener(ParseTreeListener):
         var_type = self.types_table[name]
         expr_type = self.nodes_table[ctx.expr()]
         
-        if not (var_type == expr_type or not var_type.isNumeric()):
+        if not (var_type == expr_type or (var_type == Type.FLOAT and expr_type == Type.INT)):
             self.addError(ctx, f'Cannot assign {expr_type} to variable of type {var_type}.')
         
         self.nodes_table[ctx] = var_type
