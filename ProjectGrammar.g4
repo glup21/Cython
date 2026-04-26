@@ -3,13 +3,13 @@ grammar ProjectGrammar;
 prog: statement+;
 
 statement
-    : ';' # emptyStatement
-    | primitiveType IDENTIFIER (',' IDENTIFIER)* ';' # declaration
-    | expr ';' # printExpr
-    | 'read' IDENTIFIER (',' IDENTIFIER)* ';' # read
-    | 'write' expr (',' expr)* ';'   # write
-    | '{' (statement)+ '}' # statementsBlock
-    | 'if' '(' expr ')' statement ('else' statement)? # ifStatement
+    : ';'                                               # emptyStatement
+    | primitiveType IDENTIFIER (',' IDENTIFIER)* ';'    # declaration
+    | expr ';'                                          # printExpr
+    | 'read' IDENTIFIER (',' IDENTIFIER)* ';'           # read
+    | 'write' expr (',' expr)* ';'                      # write
+    | '{' (statement)+ '}'                              # statementsBlock
+    | 'if' '(' expr ')' statement ('else' statement)?   # ifStatement
     | 'while' '(' expr ')' statement # whileStatement
     ;
 
@@ -32,10 +32,10 @@ expr
     ;
 
 primitiveType
-    : 'int'
-    | 'float'
-    | 'bool'
-    | 'string'
+    : type='int'
+    | type='float'
+    | type='bool'
+    | type='string'
     ;
 
 // Terminals

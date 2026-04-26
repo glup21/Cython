@@ -2,7 +2,7 @@ from antlr4 import *
 from ProjectGrammarLexer import ProjectGrammarLexer
 from ProjectGrammarParser import ProjectGrammarParser
 from ProjectGrammarVisitor import ProjectGrammarVisitor
-from ProjectGrammarListener import ProjectGrammarListener
+from TypeCheckListener import TypeCheckListener
 import sys
 
 def main():
@@ -16,20 +16,15 @@ def main():
     parser = ProjectGrammarParser(tokens)
 
     tree = parser.prog()
-    # visitor = PLC_Lab8_exprVisitor()
-    # results = visitor.visit(tree)
+    if parser.getNumberOfSyntaxErrors() > 0:
+        print("Syntax errors found, stopping.")
+        sys.exit(1)
 
-    # for r in results:
-    #     print(r)
-
-    listener = ProjectGrammarListener()
+    listener = TypeCheckListener()
     walker = ParseTreeWalker()
     walker.walk(listener, tree)
 
-    # for key, value in listener.variables.items():
-    #     print(f"{key}: {value}")
-
-    print(listener.result)
+    print(listener.errors)
 
     output = open('instructions.txt', 'w')
     output.write(listener.result)

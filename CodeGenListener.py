@@ -4,9 +4,58 @@ if "." in __name__:
     from .ProjectGrammarParser import ProjectGrammarParser
 else:
     from ProjectGrammarParser import ProjectGrammarParser
+from enum import Enum
+
+class Type(Enum):
+    INT = 0
+    FLOAT = 1
+    STRING = 2
+    BOOL = 3
+
+    @staticmethod
+    def stringToType(s):
+        if s == 'int':
+            return Type.INT
+        if s == 'float':
+            return Type.FLOAT
+        if s == 'string':
+            return Type.STRING
+        if s == 'bool':
+            return Type.BOOL
+
+        raise Exception(f"Unknown type: {s}")
+    
+def parseType(v):
+    if type(v) == float:
+        return Type.FLOAT
+    if type(v) == int:
+        return Type.INT
+    if type(v) == str:
+        return Type.STRING
+    if type(v) == bool:
+        return Type.BOOL
 
 # This class defines a complete listener for a parse tree produced by ProjectGrammarParser.
 class ProjectGrammarListener(ParseTreeListener):
+
+    def __init__(self):
+        # For variable types - string : enum 
+        self.types_table = {}
+
+        # For variable values - string : object
+        self.var_values = {}
+
+        # For nodes types - ctx : enum
+        self.nodes_table = {}
+
+        # For nodes values - ctx : object
+        self.nodes_values = {}
+
+        # Output instructions
+        self.result = ''
+
+        self.type_exceptions = {}
+
 
     # Enter a parse tree produced by ProjectGrammarParser#prog.
     def enterProg(self, ctx:ProjectGrammarParser.ProgContext):
@@ -32,7 +81,15 @@ class ProjectGrammarListener(ParseTreeListener):
 
     # Exit a parse tree produced by ProjectGrammarParser#declaration.
     def exitDeclaration(self, ctx:ProjectGrammarParser.DeclarationContext):
-        pass
+        type = Type.stringToType(ctx.primitiveType().getText())
+        name = ctx.getText()
+
+        if name in self.types_table:
+            self.errors.append(f'{ctx.start.line}:{ctx.start.column} Variable {name} is already declared!')
+            return 
+
+        for id in ctx.IDENTIFIER():
+            id_type = Type.parseType(id.getText())
 
 
     # Enter a parse tree produced by ProjectGrammarParser#printExpr.
