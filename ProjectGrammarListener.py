@@ -17,129 +17,30 @@ class ProjectGrammarListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by ProjectGrammarParser#statement.
-    def enterStatement(self, ctx:ProjectGrammarParser.StatementContext):
+    # Enter a parse tree produced by ProjectGrammarParser#emptyStatement.
+    def enterEmptyStatement(self, ctx:ProjectGrammarParser.EmptyStatementContext):
         pass
 
-    # Exit a parse tree produced by ProjectGrammarParser#statement.
-    def exitStatement(self, ctx:ProjectGrammarParser.StatementContext):
-        pass
-
-
-    # Enter a parse tree produced by ProjectGrammarParser#expr.
-    def enterExpr(self, ctx:ProjectGrammarParser.ExprContext):
-        pass
-
-    # Exit a parse tree produced by ProjectGrammarParser#expr.
-    def exitExpr(self, ctx:ProjectGrammarParser.ExprContext):
+    # Exit a parse tree produced by ProjectGrammarParser#emptyStatement.
+    def exitEmptyStatement(self, ctx:ProjectGrammarParser.EmptyStatementContext):
         pass
 
 
-    # Enter a parse tree produced by ProjectGrammarParser#expr_list.
-    def enterExpr_list(self, ctx:ProjectGrammarParser.Expr_listContext):
+    # Enter a parse tree produced by ProjectGrammarParser#declaration.
+    def enterDeclaration(self, ctx:ProjectGrammarParser.DeclarationContext):
         pass
 
-    # Exit a parse tree produced by ProjectGrammarParser#expr_list.
-    def exitExpr_list(self, ctx:ProjectGrammarParser.Expr_listContext):
-        pass
-
-
-    # Enter a parse tree produced by ProjectGrammarParser#assignment.
-    def enterAssignment(self, ctx:ProjectGrammarParser.AssignmentContext):
-        pass
-
-    # Exit a parse tree produced by ProjectGrammarParser#assignment.
-    def exitAssignment(self, ctx:ProjectGrammarParser.AssignmentContext):
+    # Exit a parse tree produced by ProjectGrammarParser#declaration.
+    def exitDeclaration(self, ctx:ProjectGrammarParser.DeclarationContext):
         pass
 
 
-    # Enter a parse tree produced by ProjectGrammarParser#logic.
-    def enterLogic(self, ctx:ProjectGrammarParser.LogicContext):
+    # Enter a parse tree produced by ProjectGrammarParser#printExpr.
+    def enterPrintExpr(self, ctx:ProjectGrammarParser.PrintExprContext):
         pass
 
-    # Exit a parse tree produced by ProjectGrammarParser#logic.
-    def exitLogic(self, ctx:ProjectGrammarParser.LogicContext):
-        pass
-
-
-    # Enter a parse tree produced by ProjectGrammarParser#equality.
-    def enterEquality(self, ctx:ProjectGrammarParser.EqualityContext):
-        pass
-
-    # Exit a parse tree produced by ProjectGrammarParser#equality.
-    def exitEquality(self, ctx:ProjectGrammarParser.EqualityContext):
-        pass
-
-
-    # Enter a parse tree produced by ProjectGrammarParser#relation.
-    def enterRelation(self, ctx:ProjectGrammarParser.RelationContext):
-        pass
-
-    # Exit a parse tree produced by ProjectGrammarParser#relation.
-    def exitRelation(self, ctx:ProjectGrammarParser.RelationContext):
-        pass
-
-
-    # Enter a parse tree produced by ProjectGrammarParser#concat.
-    def enterConcat(self, ctx:ProjectGrammarParser.ConcatContext):
-        pass
-
-    # Exit a parse tree produced by ProjectGrammarParser#concat.
-    def exitConcat(self, ctx:ProjectGrammarParser.ConcatContext):
-        pass
-
-
-    # Enter a parse tree produced by ProjectGrammarParser#add.
-    def enterAdd(self, ctx:ProjectGrammarParser.AddContext):
-        pass
-
-    # Exit a parse tree produced by ProjectGrammarParser#add.
-    def exitAdd(self, ctx:ProjectGrammarParser.AddContext):
-        pass
-
-
-    # Enter a parse tree produced by ProjectGrammarParser#mul.
-    def enterMul(self, ctx:ProjectGrammarParser.MulContext):
-        pass
-
-    # Exit a parse tree produced by ProjectGrammarParser#mul.
-    def exitMul(self, ctx:ProjectGrammarParser.MulContext):
-        pass
-
-
-    # Enter a parse tree produced by ProjectGrammarParser#unary.
-    def enterUnary(self, ctx:ProjectGrammarParser.UnaryContext):
-        pass
-
-    # Exit a parse tree produced by ProjectGrammarParser#unary.
-    def exitUnary(self, ctx:ProjectGrammarParser.UnaryContext):
-        pass
-
-
-    # Enter a parse tree produced by ProjectGrammarParser#primary.
-    def enterPrimary(self, ctx:ProjectGrammarParser.PrimaryContext):
-        pass
-
-    # Exit a parse tree produced by ProjectGrammarParser#primary.
-    def exitPrimary(self, ctx:ProjectGrammarParser.PrimaryContext):
-        pass
-
-
-    # Enter a parse tree produced by ProjectGrammarParser#id_list.
-    def enterId_list(self, ctx:ProjectGrammarParser.Id_listContext):
-        pass
-
-    # Exit a parse tree produced by ProjectGrammarParser#id_list.
-    def exitId_list(self, ctx:ProjectGrammarParser.Id_listContext):
-        pass
-
-
-    # Enter a parse tree produced by ProjectGrammarParser#var.
-    def enterVar(self, ctx:ProjectGrammarParser.VarContext):
-        pass
-
-    # Exit a parse tree produced by ProjectGrammarParser#var.
-    def exitVar(self, ctx:ProjectGrammarParser.VarContext):
+    # Exit a parse tree produced by ProjectGrammarParser#printExpr.
+    def exitPrintExpr(self, ctx:ProjectGrammarParser.PrintExprContext):
         pass
 
 
@@ -161,30 +62,174 @@ class ProjectGrammarListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by ProjectGrammarParser#if.
-    def enterIf(self, ctx:ProjectGrammarParser.IfContext):
+    # Enter a parse tree produced by ProjectGrammarParser#statementsBlock.
+    def enterStatementsBlock(self, ctx:ProjectGrammarParser.StatementsBlockContext):
         pass
 
-    # Exit a parse tree produced by ProjectGrammarParser#if.
-    def exitIf(self, ctx:ProjectGrammarParser.IfContext):
-        pass
-
-
-    # Enter a parse tree produced by ProjectGrammarParser#while.
-    def enterWhile(self, ctx:ProjectGrammarParser.WhileContext):
-        pass
-
-    # Exit a parse tree produced by ProjectGrammarParser#while.
-    def exitWhile(self, ctx:ProjectGrammarParser.WhileContext):
+    # Exit a parse tree produced by ProjectGrammarParser#statementsBlock.
+    def exitStatementsBlock(self, ctx:ProjectGrammarParser.StatementsBlockContext):
         pass
 
 
-    # Enter a parse tree produced by ProjectGrammarParser#condition.
-    def enterCondition(self, ctx:ProjectGrammarParser.ConditionContext):
+    # Enter a parse tree produced by ProjectGrammarParser#ifStatement.
+    def enterIfStatement(self, ctx:ProjectGrammarParser.IfStatementContext):
         pass
 
-    # Exit a parse tree produced by ProjectGrammarParser#condition.
-    def exitCondition(self, ctx:ProjectGrammarParser.ConditionContext):
+    # Exit a parse tree produced by ProjectGrammarParser#ifStatement.
+    def exitIfStatement(self, ctx:ProjectGrammarParser.IfStatementContext):
+        pass
+
+
+    # Enter a parse tree produced by ProjectGrammarParser#whileStatement.
+    def enterWhileStatement(self, ctx:ProjectGrammarParser.WhileStatementContext):
+        pass
+
+    # Exit a parse tree produced by ProjectGrammarParser#whileStatement.
+    def exitWhileStatement(self, ctx:ProjectGrammarParser.WhileStatementContext):
+        pass
+
+
+    # Enter a parse tree produced by ProjectGrammarParser#mulDivMod.
+    def enterMulDivMod(self, ctx:ProjectGrammarParser.MulDivModContext):
+        pass
+
+    # Exit a parse tree produced by ProjectGrammarParser#mulDivMod.
+    def exitMulDivMod(self, ctx:ProjectGrammarParser.MulDivModContext):
+        pass
+
+
+    # Enter a parse tree produced by ProjectGrammarParser#negation.
+    def enterNegation(self, ctx:ProjectGrammarParser.NegationContext):
+        pass
+
+    # Exit a parse tree produced by ProjectGrammarParser#negation.
+    def exitNegation(self, ctx:ProjectGrammarParser.NegationContext):
+        pass
+
+
+    # Enter a parse tree produced by ProjectGrammarParser#parens.
+    def enterParens(self, ctx:ProjectGrammarParser.ParensContext):
+        pass
+
+    # Exit a parse tree produced by ProjectGrammarParser#parens.
+    def exitParens(self, ctx:ProjectGrammarParser.ParensContext):
+        pass
+
+
+    # Enter a parse tree produced by ProjectGrammarParser#comparison.
+    def enterComparison(self, ctx:ProjectGrammarParser.ComparisonContext):
+        pass
+
+    # Exit a parse tree produced by ProjectGrammarParser#comparison.
+    def exitComparison(self, ctx:ProjectGrammarParser.ComparisonContext):
+        pass
+
+
+    # Enter a parse tree produced by ProjectGrammarParser#bool.
+    def enterBool(self, ctx:ProjectGrammarParser.BoolContext):
+        pass
+
+    # Exit a parse tree produced by ProjectGrammarParser#bool.
+    def exitBool(self, ctx:ProjectGrammarParser.BoolContext):
+        pass
+
+
+    # Enter a parse tree produced by ProjectGrammarParser#string.
+    def enterString(self, ctx:ProjectGrammarParser.StringContext):
+        pass
+
+    # Exit a parse tree produced by ProjectGrammarParser#string.
+    def exitString(self, ctx:ProjectGrammarParser.StringContext):
+        pass
+
+
+    # Enter a parse tree produced by ProjectGrammarParser#addSubConcat.
+    def enterAddSubConcat(self, ctx:ProjectGrammarParser.AddSubConcatContext):
+        pass
+
+    # Exit a parse tree produced by ProjectGrammarParser#addSubConcat.
+    def exitAddSubConcat(self, ctx:ProjectGrammarParser.AddSubConcatContext):
+        pass
+
+
+    # Enter a parse tree produced by ProjectGrammarParser#assignment.
+    def enterAssignment(self, ctx:ProjectGrammarParser.AssignmentContext):
+        pass
+
+    # Exit a parse tree produced by ProjectGrammarParser#assignment.
+    def exitAssignment(self, ctx:ProjectGrammarParser.AssignmentContext):
+        pass
+
+
+    # Enter a parse tree produced by ProjectGrammarParser#logicOr.
+    def enterLogicOr(self, ctx:ProjectGrammarParser.LogicOrContext):
+        pass
+
+    # Exit a parse tree produced by ProjectGrammarParser#logicOr.
+    def exitLogicOr(self, ctx:ProjectGrammarParser.LogicOrContext):
+        pass
+
+
+    # Enter a parse tree produced by ProjectGrammarParser#float.
+    def enterFloat(self, ctx:ProjectGrammarParser.FloatContext):
+        pass
+
+    # Exit a parse tree produced by ProjectGrammarParser#float.
+    def exitFloat(self, ctx:ProjectGrammarParser.FloatContext):
+        pass
+
+
+    # Enter a parse tree produced by ProjectGrammarParser#int.
+    def enterInt(self, ctx:ProjectGrammarParser.IntContext):
+        pass
+
+    # Exit a parse tree produced by ProjectGrammarParser#int.
+    def exitInt(self, ctx:ProjectGrammarParser.IntContext):
+        pass
+
+
+    # Enter a parse tree produced by ProjectGrammarParser#relation.
+    def enterRelation(self, ctx:ProjectGrammarParser.RelationContext):
+        pass
+
+    # Exit a parse tree produced by ProjectGrammarParser#relation.
+    def exitRelation(self, ctx:ProjectGrammarParser.RelationContext):
+        pass
+
+
+    # Enter a parse tree produced by ProjectGrammarParser#not.
+    def enterNot(self, ctx:ProjectGrammarParser.NotContext):
+        pass
+
+    # Exit a parse tree produced by ProjectGrammarParser#not.
+    def exitNot(self, ctx:ProjectGrammarParser.NotContext):
+        pass
+
+
+    # Enter a parse tree produced by ProjectGrammarParser#logicAnd.
+    def enterLogicAnd(self, ctx:ProjectGrammarParser.LogicAndContext):
+        pass
+
+    # Exit a parse tree produced by ProjectGrammarParser#logicAnd.
+    def exitLogicAnd(self, ctx:ProjectGrammarParser.LogicAndContext):
+        pass
+
+
+    # Enter a parse tree produced by ProjectGrammarParser#id.
+    def enterId(self, ctx:ProjectGrammarParser.IdContext):
+        pass
+
+    # Exit a parse tree produced by ProjectGrammarParser#id.
+    def exitId(self, ctx:ProjectGrammarParser.IdContext):
+        pass
+
+
+    # Enter a parse tree produced by ProjectGrammarParser#primitiveType.
+    def enterPrimitiveType(self, ctx:ProjectGrammarParser.PrimitiveTypeContext):
+        pass
+
+    # Exit a parse tree produced by ProjectGrammarParser#primitiveType.
+    def exitPrimitiveType(self, ctx:ProjectGrammarParser.PrimitiveTypeContext):
         pass
 
 

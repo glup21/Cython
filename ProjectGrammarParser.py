@@ -10,74 +10,48 @@ else:
 
 def serializedATN():
     return [
-        4,1,31,202,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
-        6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
-        2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,1,0,
-        4,0,42,8,0,11,0,12,0,43,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4,1,
-        55,8,1,11,1,12,1,56,1,1,1,1,1,1,1,1,3,1,63,8,1,1,2,1,2,1,3,1,3,1,
-        3,5,3,70,8,3,10,3,12,3,73,9,3,1,4,1,4,1,4,1,4,3,4,79,8,4,1,5,1,5,
-        1,5,1,5,1,5,1,5,5,5,87,8,5,10,5,12,5,90,9,5,1,6,1,6,1,6,1,6,1,6,
-        1,6,5,6,98,8,6,10,6,12,6,101,9,6,1,7,1,7,1,7,1,7,1,7,1,7,5,7,109,
-        8,7,10,7,12,7,112,9,7,1,8,1,8,1,8,1,8,1,8,1,8,5,8,120,8,8,10,8,12,
-        8,123,9,8,1,9,1,9,1,9,1,9,1,9,1,9,5,9,131,8,9,10,9,12,9,134,9,9,
-        1,10,1,10,1,10,1,10,1,10,1,10,5,10,142,8,10,10,10,12,10,145,9,10,
-        1,11,1,11,1,11,1,11,1,11,3,11,152,8,11,1,12,1,12,1,12,1,12,1,12,
-        1,12,1,12,1,12,1,12,3,12,163,8,12,1,13,1,13,1,13,5,13,168,8,13,10,
-        13,12,13,171,9,13,1,14,1,14,1,14,1,14,1,15,1,15,1,15,1,15,1,16,1,
-        16,1,16,1,16,1,17,1,17,1,17,1,17,1,17,1,17,1,17,3,17,192,8,17,1,
-        18,1,18,1,18,1,18,1,18,1,18,1,19,1,19,1,19,0,6,10,12,14,16,18,20,
-        20,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,0,2,1,
-        0,4,5,2,0,6,7,16,16,207,0,41,1,0,0,0,2,62,1,0,0,0,4,64,1,0,0,0,6,
-        66,1,0,0,0,8,78,1,0,0,0,10,80,1,0,0,0,12,91,1,0,0,0,14,102,1,0,0,
-        0,16,113,1,0,0,0,18,124,1,0,0,0,20,135,1,0,0,0,22,151,1,0,0,0,24,
-        162,1,0,0,0,26,164,1,0,0,0,28,172,1,0,0,0,30,176,1,0,0,0,32,180,
-        1,0,0,0,34,184,1,0,0,0,36,193,1,0,0,0,38,199,1,0,0,0,40,42,3,2,1,
-        0,41,40,1,0,0,0,42,43,1,0,0,0,43,41,1,0,0,0,43,44,1,0,0,0,44,1,1,
-        0,0,0,45,63,5,29,0,0,46,63,3,28,14,0,47,48,3,4,2,0,48,49,5,29,0,
-        0,49,63,1,0,0,0,50,63,3,30,15,0,51,63,3,32,16,0,52,54,5,1,0,0,53,
-        55,3,2,1,0,54,53,1,0,0,0,55,56,1,0,0,0,56,54,1,0,0,0,56,57,1,0,0,
-        0,57,58,1,0,0,0,58,59,5,2,0,0,59,63,1,0,0,0,60,63,3,34,17,0,61,63,
-        3,36,18,0,62,45,1,0,0,0,62,46,1,0,0,0,62,47,1,0,0,0,62,50,1,0,0,
-        0,62,51,1,0,0,0,62,52,1,0,0,0,62,60,1,0,0,0,62,61,1,0,0,0,63,3,1,
-        0,0,0,64,65,3,8,4,0,65,5,1,0,0,0,66,71,3,4,2,0,67,68,5,3,0,0,68,
-        70,3,4,2,0,69,67,1,0,0,0,70,73,1,0,0,0,71,69,1,0,0,0,71,72,1,0,0,
-        0,72,7,1,0,0,0,73,71,1,0,0,0,74,75,5,24,0,0,75,76,5,22,0,0,76,79,
-        3,8,4,0,77,79,3,10,5,0,78,74,1,0,0,0,78,77,1,0,0,0,79,9,1,0,0,0,
-        80,81,6,5,-1,0,81,82,3,12,6,0,82,88,1,0,0,0,83,84,10,2,0,0,84,85,
-        5,20,0,0,85,87,3,12,6,0,86,83,1,0,0,0,87,90,1,0,0,0,88,86,1,0,0,
-        0,88,89,1,0,0,0,89,11,1,0,0,0,90,88,1,0,0,0,91,92,6,6,-1,0,92,93,
-        3,14,7,0,93,99,1,0,0,0,94,95,10,2,0,0,95,96,5,19,0,0,96,98,3,14,
-        7,0,97,94,1,0,0,0,98,101,1,0,0,0,99,97,1,0,0,0,99,100,1,0,0,0,100,
-        13,1,0,0,0,101,99,1,0,0,0,102,103,6,7,-1,0,103,104,3,18,9,0,104,
-        110,1,0,0,0,105,106,10,2,0,0,106,107,5,18,0,0,107,109,3,16,8,0,108,
-        105,1,0,0,0,109,112,1,0,0,0,110,108,1,0,0,0,110,111,1,0,0,0,111,
-        15,1,0,0,0,112,110,1,0,0,0,113,114,6,8,-1,0,114,115,3,18,9,0,115,
-        121,1,0,0,0,116,117,10,2,0,0,117,118,5,17,0,0,118,120,3,18,9,0,119,
-        116,1,0,0,0,120,123,1,0,0,0,121,119,1,0,0,0,121,122,1,0,0,0,122,
-        17,1,0,0,0,123,121,1,0,0,0,124,125,6,9,-1,0,125,126,3,20,10,0,126,
-        132,1,0,0,0,127,128,10,2,0,0,128,129,7,0,0,0,129,131,3,20,10,0,130,
-        127,1,0,0,0,131,134,1,0,0,0,132,130,1,0,0,0,132,133,1,0,0,0,133,
-        19,1,0,0,0,134,132,1,0,0,0,135,136,6,10,-1,0,136,137,3,22,11,0,137,
-        143,1,0,0,0,138,139,10,2,0,0,139,140,7,1,0,0,140,142,3,22,11,0,141,
-        138,1,0,0,0,142,145,1,0,0,0,143,141,1,0,0,0,143,144,1,0,0,0,144,
-        21,1,0,0,0,145,143,1,0,0,0,146,147,5,21,0,0,147,152,3,22,11,0,148,
-        149,5,5,0,0,149,152,3,22,11,0,150,152,3,24,12,0,151,146,1,0,0,0,
-        151,148,1,0,0,0,151,150,1,0,0,0,152,23,1,0,0,0,153,163,5,25,0,0,
-        154,163,5,26,0,0,155,163,5,27,0,0,156,163,5,28,0,0,157,163,5,24,
-        0,0,158,159,5,8,0,0,159,160,3,4,2,0,160,161,5,9,0,0,161,163,1,0,
-        0,0,162,153,1,0,0,0,162,154,1,0,0,0,162,155,1,0,0,0,162,156,1,0,
-        0,0,162,157,1,0,0,0,162,158,1,0,0,0,163,25,1,0,0,0,164,169,5,24,
-        0,0,165,166,5,3,0,0,166,168,5,24,0,0,167,165,1,0,0,0,168,171,1,0,
-        0,0,169,167,1,0,0,0,169,170,1,0,0,0,170,27,1,0,0,0,171,169,1,0,0,
-        0,172,173,5,23,0,0,173,174,3,26,13,0,174,175,5,29,0,0,175,29,1,0,
-        0,0,176,177,5,10,0,0,177,178,3,26,13,0,178,179,5,29,0,0,179,31,1,
-        0,0,0,180,181,5,11,0,0,181,182,3,6,3,0,182,183,5,29,0,0,183,33,1,
-        0,0,0,184,185,5,12,0,0,185,186,5,8,0,0,186,187,3,38,19,0,187,188,
-        5,9,0,0,188,191,3,2,1,0,189,190,5,13,0,0,190,192,3,2,1,0,191,189,
-        1,0,0,0,191,192,1,0,0,0,192,35,1,0,0,0,193,194,5,14,0,0,194,195,
-        5,8,0,0,195,196,3,38,19,0,196,197,5,9,0,0,197,198,3,2,1,0,198,37,
-        1,0,0,0,199,200,3,4,2,0,200,39,1,0,0,0,15,43,56,62,71,78,88,99,110,
-        121,132,143,151,162,169,191
+        4,1,36,119,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,1,0,4,0,10,8,0,11,0,12,
+        0,11,1,1,1,1,1,1,1,1,1,1,5,1,19,8,1,10,1,12,1,22,9,1,1,1,1,1,1,1,
+        1,1,1,1,1,1,1,1,1,1,1,1,5,1,33,8,1,10,1,12,1,36,9,1,1,1,1,1,1,1,
+        1,1,1,1,5,1,43,8,1,10,1,12,1,46,9,1,1,1,1,1,1,1,1,1,4,1,52,8,1,11,
+        1,12,1,53,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3,1,65,8,1,1,1,1,1,
+        1,1,1,1,1,1,1,1,3,1,73,8,1,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,
+        2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,3,2,92,8,2,1,2,1,2,1,2,1,2,1,2,1,2,
+        1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,5,2,112,8,2,10,2,
+        12,2,115,9,2,1,3,1,3,1,3,0,1,4,4,0,2,4,6,0,5,1,0,19,21,2,0,17,18,
+        22,22,1,0,23,24,1,0,25,26,1,0,13,16,141,0,9,1,0,0,0,2,72,1,0,0,0,
+        4,91,1,0,0,0,6,116,1,0,0,0,8,10,3,2,1,0,9,8,1,0,0,0,10,11,1,0,0,
+        0,11,9,1,0,0,0,11,12,1,0,0,0,12,1,1,0,0,0,13,73,5,1,0,0,14,15,3,
+        6,3,0,15,20,5,34,0,0,16,17,5,2,0,0,17,19,5,34,0,0,18,16,1,0,0,0,
+        19,22,1,0,0,0,20,18,1,0,0,0,20,21,1,0,0,0,21,23,1,0,0,0,22,20,1,
+        0,0,0,23,24,5,1,0,0,24,73,1,0,0,0,25,26,3,4,2,0,26,27,5,1,0,0,27,
+        73,1,0,0,0,28,29,5,3,0,0,29,34,5,34,0,0,30,31,5,2,0,0,31,33,5,34,
+        0,0,32,30,1,0,0,0,33,36,1,0,0,0,34,32,1,0,0,0,34,35,1,0,0,0,35,37,
+        1,0,0,0,36,34,1,0,0,0,37,73,5,1,0,0,38,39,5,4,0,0,39,44,3,4,2,0,
+        40,41,5,2,0,0,41,43,3,4,2,0,42,40,1,0,0,0,43,46,1,0,0,0,44,42,1,
+        0,0,0,44,45,1,0,0,0,45,47,1,0,0,0,46,44,1,0,0,0,47,48,5,1,0,0,48,
+        73,1,0,0,0,49,51,5,5,0,0,50,52,3,2,1,0,51,50,1,0,0,0,52,53,1,0,0,
+        0,53,51,1,0,0,0,53,54,1,0,0,0,54,55,1,0,0,0,55,56,5,6,0,0,56,73,
+        1,0,0,0,57,58,5,7,0,0,58,59,5,8,0,0,59,60,3,4,2,0,60,61,5,9,0,0,
+        61,64,3,2,1,0,62,63,5,10,0,0,63,65,3,2,1,0,64,62,1,0,0,0,64,65,1,
+        0,0,0,65,73,1,0,0,0,66,67,5,11,0,0,67,68,5,8,0,0,68,69,3,4,2,0,69,
+        70,5,9,0,0,70,71,3,2,1,0,71,73,1,0,0,0,72,13,1,0,0,0,72,14,1,0,0,
+        0,72,25,1,0,0,0,72,28,1,0,0,0,72,38,1,0,0,0,72,49,1,0,0,0,72,57,
+        1,0,0,0,72,66,1,0,0,0,73,3,1,0,0,0,74,75,6,2,-1,0,75,76,5,18,0,0,
+        76,92,3,4,2,15,77,78,5,27,0,0,78,92,3,4,2,14,79,80,5,34,0,0,80,81,
+        5,12,0,0,81,92,3,4,2,7,82,83,5,8,0,0,83,84,3,4,2,0,84,85,5,9,0,0,
+        85,92,1,0,0,0,86,92,5,31,0,0,87,92,5,30,0,0,88,92,5,32,0,0,89,92,
+        5,33,0,0,90,92,5,34,0,0,91,74,1,0,0,0,91,77,1,0,0,0,91,79,1,0,0,
+        0,91,82,1,0,0,0,91,86,1,0,0,0,91,87,1,0,0,0,91,88,1,0,0,0,91,89,
+        1,0,0,0,91,90,1,0,0,0,92,113,1,0,0,0,93,94,10,13,0,0,94,95,7,0,0,
+        0,95,112,3,4,2,14,96,97,10,12,0,0,97,98,7,1,0,0,98,112,3,4,2,13,
+        99,100,10,11,0,0,100,101,7,2,0,0,101,112,3,4,2,12,102,103,10,10,
+        0,0,103,104,7,3,0,0,104,112,3,4,2,11,105,106,10,9,0,0,106,107,5,
+        28,0,0,107,112,3,4,2,10,108,109,10,8,0,0,109,110,5,29,0,0,110,112,
+        3,4,2,9,111,93,1,0,0,0,111,96,1,0,0,0,111,99,1,0,0,0,111,102,1,0,
+        0,0,111,105,1,0,0,0,111,108,1,0,0,0,112,115,1,0,0,0,113,111,1,0,
+        0,0,113,114,1,0,0,0,114,5,1,0,0,0,115,113,1,0,0,0,116,117,7,4,0,
+        0,117,7,1,0,0,0,10,11,20,34,44,53,64,72,91,111,113
     ]
 
 class ProjectGrammarParser ( Parser ):
@@ -90,46 +64,27 @@ class ProjectGrammarParser ( Parser ):
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "'{'", "'}'", "','", "'+'", "'-'", "'*'", 
-                     "'/'", "'('", "')'", "'read'", "'write'", "'if'", "'else'", 
-                     "'while'", "<INVALID>", "'%'", "'.'", "<INVALID>", 
-                     "<INVALID>", "<INVALID>", "'!'", "'='", "<INVALID>", 
-                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "<INVALID>", "';'" ]
+    literalNames = [ "<INVALID>", "';'", "','", "'read'", "'write'", "'{'", 
+                     "'}'", "'if'", "'('", "')'", "'else'", "'while'", "'='", 
+                     "'int'", "'float'", "'bool'", "'string'", "'+'", "'-'", 
+                     "'*'", "'/'", "'%'", "'.'", "'>'", "'<'", "'=='", "'!='", 
+                     "'!'", "'&&'", "'||'" ]
 
     symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "<INVALID>", "ARM_OP", "MOD", 
-                      "CONCAT_STR", "REL_OP", "COMP_OP", "LOG_OP", "NOT", 
-                      "ASSIGN", "TYPE", "ID", "INT", "FLOAT", "STRING", 
-                      "BOOL", "SEMI", "COMMENT", "WS" ]
+                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
+                      "<INVALID>", "ADD", "SUB", "MUL", "DIV", "MOD", "CONCAT", 
+                      "GREATER", "LESSER", "EQUAL", "NOT_EQUAL", "NOT", 
+                      "AND", "OR", "FLOAT", "INT", "BOOL", "STRING", "IDENTIFIER", 
+                      "COMMENT", "WS" ]
 
     RULE_prog = 0
     RULE_statement = 1
     RULE_expr = 2
-    RULE_expr_list = 3
-    RULE_assignment = 4
-    RULE_logic = 5
-    RULE_equality = 6
-    RULE_relation = 7
-    RULE_concat = 8
-    RULE_add = 9
-    RULE_mul = 10
-    RULE_unary = 11
-    RULE_primary = 12
-    RULE_id_list = 13
-    RULE_var = 14
-    RULE_read = 15
-    RULE_write = 16
-    RULE_if = 17
-    RULE_while = 18
-    RULE_condition = 19
+    RULE_primitiveType = 3
 
-    ruleNames =  [ "prog", "statement", "expr", "expr_list", "assignment", 
-                   "logic", "equality", "relation", "concat", "add", "mul", 
-                   "unary", "primary", "id_list", "var", "read", "write", 
-                   "if", "while", "condition" ]
+    ruleNames =  [ "prog", "statement", "expr", "primitiveType" ]
 
     EOF = Token.EOF
     T__0=1
@@ -146,23 +101,28 @@ class ProjectGrammarParser ( Parser ):
     T__11=12
     T__12=13
     T__13=14
-    ARM_OP=15
-    MOD=16
-    CONCAT_STR=17
-    REL_OP=18
-    COMP_OP=19
-    LOG_OP=20
-    NOT=21
-    ASSIGN=22
-    TYPE=23
-    ID=24
-    INT=25
-    FLOAT=26
-    STRING=27
-    BOOL=28
-    SEMI=29
-    COMMENT=30
-    WS=31
+    T__14=15
+    T__15=16
+    ADD=17
+    SUB=18
+    MUL=19
+    DIV=20
+    MOD=21
+    CONCAT=22
+    GREATER=23
+    LESSER=24
+    EQUAL=25
+    NOT_EQUAL=26
+    NOT=27
+    AND=28
+    OR=29
+    FLOAT=30
+    INT=31
+    BOOL=32
+    STRING=33
+    IDENTIFIER=34
+    COMMENT=35
+    WS=36
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -214,16 +174,16 @@ class ProjectGrammarParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 41 
+            self.state = 9 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
-                self.state = 40
+                self.state = 8
                 self.statement()
-                self.state = 43 
+                self.state = 11 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & 1067474210) != 0)):
+                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & 33420601786) != 0)):
                     break
 
         except RecognitionException as re:
@@ -242,24 +202,98 @@ class ProjectGrammarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def SEMI(self):
-            return self.getToken(ProjectGrammarParser.SEMI, 0)
 
-        def var(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.VarContext,0)
+        def getRuleIndex(self):
+            return ProjectGrammarParser.RULE_statement
 
+     
+        def copyFrom(self, ctx:ParserRuleContext):
+            super().copyFrom(ctx)
+
+
+
+    class WhileStatementContext(StatementContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ProjectGrammarParser.StatementContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
 
         def expr(self):
             return self.getTypedRuleContext(ProjectGrammarParser.ExprContext,0)
 
+        def statement(self):
+            return self.getTypedRuleContext(ProjectGrammarParser.StatementContext,0)
 
-        def read(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.ReadContext,0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterWhileStatement" ):
+                listener.enterWhileStatement(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitWhileStatement" ):
+                listener.exitWhileStatement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWhileStatement" ):
+                return visitor.visitWhileStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
-        def write(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.WriteContext,0)
+    class EmptyStatementContext(StatementContext):
 
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ProjectGrammarParser.StatementContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterEmptyStatement" ):
+                listener.enterEmptyStatement(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitEmptyStatement" ):
+                listener.exitEmptyStatement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEmptyStatement" ):
+                return visitor.visitEmptyStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class ReadContext(StatementContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ProjectGrammarParser.StatementContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def IDENTIFIER(self, i:int=None):
+            if i is None:
+                return self.getTokens(ProjectGrammarParser.IDENTIFIER)
+            else:
+                return self.getToken(ProjectGrammarParser.IDENTIFIER, i)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterRead" ):
+                listener.enterRead(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitRead" ):
+                listener.exitRead(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRead" ):
+                return visitor.visitRead(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class StatementsBlockContext(StatementContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ProjectGrammarParser.StatementContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
 
         def statement(self, i:int=None):
             if i is None:
@@ -268,31 +302,133 @@ class ProjectGrammarParser ( Parser ):
                 return self.getTypedRuleContext(ProjectGrammarParser.StatementContext,i)
 
 
-        def if_(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.IfContext,0)
-
-
-        def while_(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.WhileContext,0)
-
-
-        def getRuleIndex(self):
-            return ProjectGrammarParser.RULE_statement
-
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterStatement" ):
-                listener.enterStatement(self)
+            if hasattr( listener, "enterStatementsBlock" ):
+                listener.enterStatementsBlock(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitStatement" ):
-                listener.exitStatement(self)
+            if hasattr( listener, "exitStatementsBlock" ):
+                listener.exitStatementsBlock(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStatement" ):
-                return visitor.visitStatement(self)
+            if hasattr( visitor, "visitStatementsBlock" ):
+                return visitor.visitStatementsBlock(self)
             else:
                 return visitor.visitChildren(self)
 
+
+    class IfStatementContext(StatementContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ProjectGrammarParser.StatementContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr(self):
+            return self.getTypedRuleContext(ProjectGrammarParser.ExprContext,0)
+
+        def statement(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(ProjectGrammarParser.StatementContext)
+            else:
+                return self.getTypedRuleContext(ProjectGrammarParser.StatementContext,i)
+
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterIfStatement" ):
+                listener.enterIfStatement(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitIfStatement" ):
+                listener.exitIfStatement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIfStatement" ):
+                return visitor.visitIfStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class DeclarationContext(StatementContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ProjectGrammarParser.StatementContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def primitiveType(self):
+            return self.getTypedRuleContext(ProjectGrammarParser.PrimitiveTypeContext,0)
+
+        def IDENTIFIER(self, i:int=None):
+            if i is None:
+                return self.getTokens(ProjectGrammarParser.IDENTIFIER)
+            else:
+                return self.getToken(ProjectGrammarParser.IDENTIFIER, i)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterDeclaration" ):
+                listener.enterDeclaration(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitDeclaration" ):
+                listener.exitDeclaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDeclaration" ):
+                return visitor.visitDeclaration(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class WriteContext(StatementContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ProjectGrammarParser.StatementContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(ProjectGrammarParser.ExprContext)
+            else:
+                return self.getTypedRuleContext(ProjectGrammarParser.ExprContext,i)
+
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterWrite" ):
+                listener.enterWrite(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitWrite" ):
+                listener.exitWrite(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWrite" ):
+                return visitor.visitWrite(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class PrintExprContext(StatementContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ProjectGrammarParser.StatementContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr(self):
+            return self.getTypedRuleContext(ProjectGrammarParser.ExprContext,0)
+
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPrintExpr" ):
+                listener.enterPrintExpr(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPrintExpr" ):
+                listener.exitPrintExpr(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPrintExpr" ):
+                return visitor.visitPrintExpr(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -302,64 +438,146 @@ class ProjectGrammarParser ( Parser ):
         self.enterRule(localctx, 2, self.RULE_statement)
         self._la = 0 # Token type
         try:
-            self.state = 62
+            self.state = 72
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [29]:
+            if token in [1]:
+                localctx = ProjectGrammarParser.EmptyStatementContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
-                self.state = 45
-                self.match(ProjectGrammarParser.SEMI)
-                pass
-            elif token in [23]:
-                self.enterOuterAlt(localctx, 2)
-                self.state = 46
-                self.var()
-                pass
-            elif token in [5, 8, 21, 24, 25, 26, 27, 28]:
-                self.enterOuterAlt(localctx, 3)
-                self.state = 47
-                self.expr()
-                self.state = 48
-                self.match(ProjectGrammarParser.SEMI)
-                pass
-            elif token in [10]:
-                self.enterOuterAlt(localctx, 4)
-                self.state = 50
-                self.read()
-                pass
-            elif token in [11]:
-                self.enterOuterAlt(localctx, 5)
-                self.state = 51
-                self.write()
-                pass
-            elif token in [1]:
-                self.enterOuterAlt(localctx, 6)
-                self.state = 52
+                self.state = 13
                 self.match(ProjectGrammarParser.T__0)
-                self.state = 54 
+                pass
+            elif token in [13, 14, 15, 16]:
+                localctx = ProjectGrammarParser.DeclarationContext(self, localctx)
+                self.enterOuterAlt(localctx, 2)
+                self.state = 14
+                self.primitiveType()
+                self.state = 15
+                self.match(ProjectGrammarParser.IDENTIFIER)
+                self.state = 20
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                while _la==2:
+                    self.state = 16
+                    self.match(ProjectGrammarParser.T__1)
+                    self.state = 17
+                    self.match(ProjectGrammarParser.IDENTIFIER)
+                    self.state = 22
+                    self._errHandler.sync(self)
+                    _la = self._input.LA(1)
+
+                self.state = 23
+                self.match(ProjectGrammarParser.T__0)
+                pass
+            elif token in [8, 18, 27, 30, 31, 32, 33, 34]:
+                localctx = ProjectGrammarParser.PrintExprContext(self, localctx)
+                self.enterOuterAlt(localctx, 3)
+                self.state = 25
+                self.expr(0)
+                self.state = 26
+                self.match(ProjectGrammarParser.T__0)
+                pass
+            elif token in [3]:
+                localctx = ProjectGrammarParser.ReadContext(self, localctx)
+                self.enterOuterAlt(localctx, 4)
+                self.state = 28
+                self.match(ProjectGrammarParser.T__2)
+                self.state = 29
+                self.match(ProjectGrammarParser.IDENTIFIER)
+                self.state = 34
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                while _la==2:
+                    self.state = 30
+                    self.match(ProjectGrammarParser.T__1)
+                    self.state = 31
+                    self.match(ProjectGrammarParser.IDENTIFIER)
+                    self.state = 36
+                    self._errHandler.sync(self)
+                    _la = self._input.LA(1)
+
+                self.state = 37
+                self.match(ProjectGrammarParser.T__0)
+                pass
+            elif token in [4]:
+                localctx = ProjectGrammarParser.WriteContext(self, localctx)
+                self.enterOuterAlt(localctx, 5)
+                self.state = 38
+                self.match(ProjectGrammarParser.T__3)
+                self.state = 39
+                self.expr(0)
+                self.state = 44
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                while _la==2:
+                    self.state = 40
+                    self.match(ProjectGrammarParser.T__1)
+                    self.state = 41
+                    self.expr(0)
+                    self.state = 46
+                    self._errHandler.sync(self)
+                    _la = self._input.LA(1)
+
+                self.state = 47
+                self.match(ProjectGrammarParser.T__0)
+                pass
+            elif token in [5]:
+                localctx = ProjectGrammarParser.StatementsBlockContext(self, localctx)
+                self.enterOuterAlt(localctx, 6)
+                self.state = 49
+                self.match(ProjectGrammarParser.T__4)
+                self.state = 51 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while True:
-                    self.state = 53
+                    self.state = 50
                     self.statement()
-                    self.state = 56 
+                    self.state = 53 
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & 1067474210) != 0)):
+                    if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & 33420601786) != 0)):
                         break
 
-                self.state = 58
-                self.match(ProjectGrammarParser.T__1)
+                self.state = 55
+                self.match(ProjectGrammarParser.T__5)
                 pass
-            elif token in [12]:
+            elif token in [7]:
+                localctx = ProjectGrammarParser.IfStatementContext(self, localctx)
                 self.enterOuterAlt(localctx, 7)
+                self.state = 57
+                self.match(ProjectGrammarParser.T__6)
+                self.state = 58
+                self.match(ProjectGrammarParser.T__7)
+                self.state = 59
+                self.expr(0)
                 self.state = 60
-                self.if_()
-                pass
-            elif token in [14]:
-                self.enterOuterAlt(localctx, 8)
+                self.match(ProjectGrammarParser.T__8)
                 self.state = 61
-                self.while_()
+                self.statement()
+                self.state = 64
+                self._errHandler.sync(self)
+                la_ = self._interp.adaptivePredict(self._input,5,self._ctx)
+                if la_ == 1:
+                    self.state = 62
+                    self.match(ProjectGrammarParser.T__9)
+                    self.state = 63
+                    self.statement()
+
+
+                pass
+            elif token in [11]:
+                localctx = ProjectGrammarParser.WhileStatementContext(self, localctx)
+                self.enterOuterAlt(localctx, 8)
+                self.state = 66
+                self.match(ProjectGrammarParser.T__10)
+                self.state = 67
+                self.match(ProjectGrammarParser.T__7)
+                self.state = 68
+                self.expr(0)
+                self.state = 69
+                self.match(ProjectGrammarParser.T__8)
+                self.state = 70
+                self.statement()
                 pass
             else:
                 raise NoViableAltException(self)
@@ -380,53 +598,21 @@ class ProjectGrammarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def assignment(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.AssignmentContext,0)
-
 
         def getRuleIndex(self):
             return ProjectGrammarParser.RULE_expr
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterExpr" ):
-                listener.enterExpr(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitExpr" ):
-                listener.exitExpr(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExpr" ):
-                return visitor.visitExpr(self)
-            else:
-                return visitor.visitChildren(self)
+     
+        def copyFrom(self, ctx:ParserRuleContext):
+            super().copyFrom(ctx)
 
 
+    class MulDivModContext(ExprContext):
 
-
-    def expr(self):
-
-        localctx = ProjectGrammarParser.ExprContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 4, self.RULE_expr)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 64
-            self.assignment()
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class Expr_listContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ProjectGrammarParser.ExprContext
+            super().__init__(parser)
+            self.op = None # Token
+            self.copyFrom(ctx)
 
         def expr(self, i:int=None):
             if i is None:
@@ -434,80 +620,207 @@ class ProjectGrammarParser ( Parser ):
             else:
                 return self.getTypedRuleContext(ProjectGrammarParser.ExprContext,i)
 
-
-        def getRuleIndex(self):
-            return ProjectGrammarParser.RULE_expr_list
+        def MUL(self):
+            return self.getToken(ProjectGrammarParser.MUL, 0)
+        def DIV(self):
+            return self.getToken(ProjectGrammarParser.DIV, 0)
+        def MOD(self):
+            return self.getToken(ProjectGrammarParser.MOD, 0)
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterExpr_list" ):
-                listener.enterExpr_list(self)
+            if hasattr( listener, "enterMulDivMod" ):
+                listener.enterMulDivMod(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitExpr_list" ):
-                listener.exitExpr_list(self)
+            if hasattr( listener, "exitMulDivMod" ):
+                listener.exitMulDivMod(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExpr_list" ):
-                return visitor.visitExpr_list(self)
+            if hasattr( visitor, "visitMulDivMod" ):
+                return visitor.visitMulDivMod(self)
             else:
                 return visitor.visitChildren(self)
 
 
+    class NegationContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ProjectGrammarParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def SUB(self):
+            return self.getToken(ProjectGrammarParser.SUB, 0)
+        def expr(self):
+            return self.getTypedRuleContext(ProjectGrammarParser.ExprContext,0)
 
 
-    def expr_list(self):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterNegation" ):
+                listener.enterNegation(self)
 
-        localctx = ProjectGrammarParser.Expr_listContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 6, self.RULE_expr_list)
-        self._la = 0 # Token type
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 66
-            self.expr()
-            self.state = 71
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while _la==3:
-                self.state = 67
-                self.match(ProjectGrammarParser.T__2)
-                self.state = 68
-                self.expr()
-                self.state = 73
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitNegation" ):
+                listener.exitNegation(self)
 
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNegation" ):
+                return visitor.visitNegation(self)
+            else:
+                return visitor.visitChildren(self)
 
 
-    class AssignmentContext(ParserRuleContext):
-        __slots__ = 'parser'
+    class ParensContext(ExprContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ProjectGrammarParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
 
-        def ID(self):
-            return self.getToken(ProjectGrammarParser.ID, 0)
-
-        def ASSIGN(self):
-            return self.getToken(ProjectGrammarParser.ASSIGN, 0)
-
-        def assignment(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.AssignmentContext,0)
+        def expr(self):
+            return self.getTypedRuleContext(ProjectGrammarParser.ExprContext,0)
 
 
-        def logic(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.LogicContext,0)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterParens" ):
+                listener.enterParens(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitParens" ):
+                listener.exitParens(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParens" ):
+                return visitor.visitParens(self)
+            else:
+                return visitor.visitChildren(self)
 
 
-        def getRuleIndex(self):
-            return ProjectGrammarParser.RULE_assignment
+    class ComparisonContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ProjectGrammarParser.ExprContext
+            super().__init__(parser)
+            self.op = None # Token
+            self.copyFrom(ctx)
+
+        def expr(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(ProjectGrammarParser.ExprContext)
+            else:
+                return self.getTypedRuleContext(ProjectGrammarParser.ExprContext,i)
+
+        def EQUAL(self):
+            return self.getToken(ProjectGrammarParser.EQUAL, 0)
+        def NOT_EQUAL(self):
+            return self.getToken(ProjectGrammarParser.NOT_EQUAL, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterComparison" ):
+                listener.enterComparison(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitComparison" ):
+                listener.exitComparison(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitComparison" ):
+                return visitor.visitComparison(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class BoolContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ProjectGrammarParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def BOOL(self):
+            return self.getToken(ProjectGrammarParser.BOOL, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterBool" ):
+                listener.enterBool(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitBool" ):
+                listener.exitBool(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBool" ):
+                return visitor.visitBool(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class StringContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ProjectGrammarParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def STRING(self):
+            return self.getToken(ProjectGrammarParser.STRING, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterString" ):
+                listener.enterString(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitString" ):
+                listener.exitString(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitString" ):
+                return visitor.visitString(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class AddSubConcatContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ProjectGrammarParser.ExprContext
+            super().__init__(parser)
+            self.op = None # Token
+            self.copyFrom(ctx)
+
+        def expr(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(ProjectGrammarParser.ExprContext)
+            else:
+                return self.getTypedRuleContext(ProjectGrammarParser.ExprContext,i)
+
+        def ADD(self):
+            return self.getToken(ProjectGrammarParser.ADD, 0)
+        def SUB(self):
+            return self.getToken(ProjectGrammarParser.SUB, 0)
+        def CONCAT(self):
+            return self.getToken(ProjectGrammarParser.CONCAT, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAddSubConcat" ):
+                listener.enterAddSubConcat(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAddSubConcat" ):
+                listener.exitAddSubConcat(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAddSubConcat" ):
+                return visitor.visitAddSubConcat(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class AssignmentContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ProjectGrammarParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def IDENTIFIER(self):
+            return self.getToken(ProjectGrammarParser.IDENTIFIER, 0)
+        def expr(self):
+            return self.getTypedRuleContext(ProjectGrammarParser.ExprContext,0)
+
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterAssignment" ):
@@ -524,226 +837,101 @@ class ProjectGrammarParser ( Parser ):
                 return visitor.visitChildren(self)
 
 
+    class LogicOrContext(ExprContext):
 
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ProjectGrammarParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
 
-    def assignment(self):
+        def expr(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(ProjectGrammarParser.ExprContext)
+            else:
+                return self.getTypedRuleContext(ProjectGrammarParser.ExprContext,i)
 
-        localctx = ProjectGrammarParser.AssignmentContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 8, self.RULE_assignment)
-        try:
-            self.state = 78
-            self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,4,self._ctx)
-            if la_ == 1:
-                self.enterOuterAlt(localctx, 1)
-                self.state = 74
-                self.match(ProjectGrammarParser.ID)
-                self.state = 75
-                self.match(ProjectGrammarParser.ASSIGN)
-                self.state = 76
-                self.assignment()
-                pass
-
-            elif la_ == 2:
-                self.enterOuterAlt(localctx, 2)
-                self.state = 77
-                self.logic(0)
-                pass
-
-
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class LogicContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def equality(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.EqualityContext,0)
-
-
-        def logic(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.LogicContext,0)
-
-
-        def LOG_OP(self):
-            return self.getToken(ProjectGrammarParser.LOG_OP, 0)
-
-        def getRuleIndex(self):
-            return ProjectGrammarParser.RULE_logic
+        def OR(self):
+            return self.getToken(ProjectGrammarParser.OR, 0)
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterLogic" ):
-                listener.enterLogic(self)
+            if hasattr( listener, "enterLogicOr" ):
+                listener.enterLogicOr(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitLogic" ):
-                listener.exitLogic(self)
+            if hasattr( listener, "exitLogicOr" ):
+                listener.exitLogicOr(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLogic" ):
-                return visitor.visitLogic(self)
+            if hasattr( visitor, "visitLogicOr" ):
+                return visitor.visitLogicOr(self)
             else:
                 return visitor.visitChildren(self)
 
 
+    class FloatContext(ExprContext):
 
-    def logic(self, _p:int=0):
-        _parentctx = self._ctx
-        _parentState = self.state
-        localctx = ProjectGrammarParser.LogicContext(self, self._ctx, _parentState)
-        _prevctx = localctx
-        _startState = 10
-        self.enterRecursionRule(localctx, 10, self.RULE_logic, _p)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 81
-            self.equality(0)
-            self._ctx.stop = self._input.LT(-1)
-            self.state = 88
-            self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,5,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
-                    if self._parseListeners is not None:
-                        self.triggerExitRuleEvent()
-                    _prevctx = localctx
-                    localctx = ProjectGrammarParser.LogicContext(self, _parentctx, _parentState)
-                    self.pushNewRecursionContext(localctx, _startState, self.RULE_logic)
-                    self.state = 83
-                    if not self.precpred(self._ctx, 2):
-                        from antlr4.error.Errors import FailedPredicateException
-                        raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                    self.state = 84
-                    self.match(ProjectGrammarParser.LOG_OP)
-                    self.state = 85
-                    self.equality(0) 
-                self.state = 90
-                self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,5,self._ctx)
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ProjectGrammarParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
 
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.unrollRecursionContexts(_parentctx)
-        return localctx
-
-
-    class EqualityContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def relation(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.RelationContext,0)
-
-
-        def equality(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.EqualityContext,0)
-
-
-        def COMP_OP(self):
-            return self.getToken(ProjectGrammarParser.COMP_OP, 0)
-
-        def getRuleIndex(self):
-            return ProjectGrammarParser.RULE_equality
+        def FLOAT(self):
+            return self.getToken(ProjectGrammarParser.FLOAT, 0)
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterEquality" ):
-                listener.enterEquality(self)
+            if hasattr( listener, "enterFloat" ):
+                listener.enterFloat(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitEquality" ):
-                listener.exitEquality(self)
+            if hasattr( listener, "exitFloat" ):
+                listener.exitFloat(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEquality" ):
-                return visitor.visitEquality(self)
+            if hasattr( visitor, "visitFloat" ):
+                return visitor.visitFloat(self)
             else:
                 return visitor.visitChildren(self)
 
 
+    class IntContext(ExprContext):
 
-    def equality(self, _p:int=0):
-        _parentctx = self._ctx
-        _parentState = self.state
-        localctx = ProjectGrammarParser.EqualityContext(self, self._ctx, _parentState)
-        _prevctx = localctx
-        _startState = 12
-        self.enterRecursionRule(localctx, 12, self.RULE_equality, _p)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 92
-            self.relation(0)
-            self._ctx.stop = self._input.LT(-1)
-            self.state = 99
-            self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,6,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
-                    if self._parseListeners is not None:
-                        self.triggerExitRuleEvent()
-                    _prevctx = localctx
-                    localctx = ProjectGrammarParser.EqualityContext(self, _parentctx, _parentState)
-                    self.pushNewRecursionContext(localctx, _startState, self.RULE_equality)
-                    self.state = 94
-                    if not self.precpred(self._ctx, 2):
-                        from antlr4.error.Errors import FailedPredicateException
-                        raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                    self.state = 95
-                    self.match(ProjectGrammarParser.COMP_OP)
-                    self.state = 96
-                    self.relation(0) 
-                self.state = 101
-                self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,6,self._ctx)
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ProjectGrammarParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
 
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.unrollRecursionContexts(_parentctx)
-        return localctx
+        def INT(self):
+            return self.getToken(ProjectGrammarParser.INT, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterInt" ):
+                listener.enterInt(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitInt" ):
+                listener.exitInt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInt" ):
+                return visitor.visitInt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
-    class RelationContext(ParserRuleContext):
-        __slots__ = 'parser'
+    class RelationContext(ExprContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ProjectGrammarParser.ExprContext
+            super().__init__(parser)
+            self.op = None # Token
+            self.copyFrom(ctx)
 
-        def add(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.AddContext,0)
+        def expr(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(ProjectGrammarParser.ExprContext)
+            else:
+                return self.getTypedRuleContext(ProjectGrammarParser.ExprContext,i)
 
-
-        def relation(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.RelationContext,0)
-
-
-        def REL_OP(self):
-            return self.getToken(ProjectGrammarParser.REL_OP, 0)
-
-        def concat(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.ConcatContext,0)
-
-
-        def getRuleIndex(self):
-            return ProjectGrammarParser.RULE_relation
+        def GREATER(self):
+            return self.getToken(ProjectGrammarParser.GREATER, 0)
+        def LESSER(self):
+            return self.getToken(ProjectGrammarParser.LESSER, 0)
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterRelation" ):
@@ -760,178 +948,189 @@ class ProjectGrammarParser ( Parser ):
                 return visitor.visitChildren(self)
 
 
+    class NotContext(ExprContext):
 
-    def relation(self, _p:int=0):
-        _parentctx = self._ctx
-        _parentState = self.state
-        localctx = ProjectGrammarParser.RelationContext(self, self._ctx, _parentState)
-        _prevctx = localctx
-        _startState = 14
-        self.enterRecursionRule(localctx, 14, self.RULE_relation, _p)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 103
-            self.add(0)
-            self._ctx.stop = self._input.LT(-1)
-            self.state = 110
-            self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,7,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
-                    if self._parseListeners is not None:
-                        self.triggerExitRuleEvent()
-                    _prevctx = localctx
-                    localctx = ProjectGrammarParser.RelationContext(self, _parentctx, _parentState)
-                    self.pushNewRecursionContext(localctx, _startState, self.RULE_relation)
-                    self.state = 105
-                    if not self.precpred(self._ctx, 2):
-                        from antlr4.error.Errors import FailedPredicateException
-                        raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                    self.state = 106
-                    self.match(ProjectGrammarParser.REL_OP)
-                    self.state = 107
-                    self.concat(0) 
-                self.state = 112
-                self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,7,self._ctx)
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ProjectGrammarParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
 
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.unrollRecursionContexts(_parentctx)
-        return localctx
+        def NOT(self):
+            return self.getToken(ProjectGrammarParser.NOT, 0)
+        def expr(self):
+            return self.getTypedRuleContext(ProjectGrammarParser.ExprContext,0)
 
-
-    class ConcatContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def add(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.AddContext,0)
-
-
-        def concat(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.ConcatContext,0)
-
-
-        def CONCAT_STR(self):
-            return self.getToken(ProjectGrammarParser.CONCAT_STR, 0)
-
-        def getRuleIndex(self):
-            return ProjectGrammarParser.RULE_concat
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterConcat" ):
-                listener.enterConcat(self)
+            if hasattr( listener, "enterNot" ):
+                listener.enterNot(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitConcat" ):
-                listener.exitConcat(self)
+            if hasattr( listener, "exitNot" ):
+                listener.exitNot(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitConcat" ):
-                return visitor.visitConcat(self)
+            if hasattr( visitor, "visitNot" ):
+                return visitor.visitNot(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class LogicAndContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ProjectGrammarParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(ProjectGrammarParser.ExprContext)
+            else:
+                return self.getTypedRuleContext(ProjectGrammarParser.ExprContext,i)
+
+        def AND(self):
+            return self.getToken(ProjectGrammarParser.AND, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterLogicAnd" ):
+                listener.enterLogicAnd(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitLogicAnd" ):
+                listener.exitLogicAnd(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLogicAnd" ):
+                return visitor.visitLogicAnd(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class IdContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a ProjectGrammarParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def IDENTIFIER(self):
+            return self.getToken(ProjectGrammarParser.IDENTIFIER, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterId" ):
+                listener.enterId(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitId" ):
+                listener.exitId(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitId" ):
+                return visitor.visitId(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
-    def concat(self, _p:int=0):
+    def expr(self, _p:int=0):
         _parentctx = self._ctx
         _parentState = self.state
-        localctx = ProjectGrammarParser.ConcatContext(self, self._ctx, _parentState)
+        localctx = ProjectGrammarParser.ExprContext(self, self._ctx, _parentState)
         _prevctx = localctx
-        _startState = 16
-        self.enterRecursionRule(localctx, 16, self.RULE_concat, _p)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 114
-            self.add(0)
-            self._ctx.stop = self._input.LT(-1)
-            self.state = 121
-            self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,8,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
-                    if self._parseListeners is not None:
-                        self.triggerExitRuleEvent()
-                    _prevctx = localctx
-                    localctx = ProjectGrammarParser.ConcatContext(self, _parentctx, _parentState)
-                    self.pushNewRecursionContext(localctx, _startState, self.RULE_concat)
-                    self.state = 116
-                    if not self.precpred(self._ctx, 2):
-                        from antlr4.error.Errors import FailedPredicateException
-                        raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                    self.state = 117
-                    self.match(ProjectGrammarParser.CONCAT_STR)
-                    self.state = 118
-                    self.add(0) 
-                self.state = 123
-                self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,8,self._ctx)
-
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.unrollRecursionContexts(_parentctx)
-        return localctx
-
-
-    class AddContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def mul(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.MulContext,0)
-
-
-        def add(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.AddContext,0)
-
-
-        def getRuleIndex(self):
-            return ProjectGrammarParser.RULE_add
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAdd" ):
-                listener.enterAdd(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAdd" ):
-                listener.exitAdd(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAdd" ):
-                return visitor.visitAdd(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-    def add(self, _p:int=0):
-        _parentctx = self._ctx
-        _parentState = self.state
-        localctx = ProjectGrammarParser.AddContext(self, self._ctx, _parentState)
-        _prevctx = localctx
-        _startState = 18
-        self.enterRecursionRule(localctx, 18, self.RULE_add, _p)
+        _startState = 4
+        self.enterRecursionRule(localctx, 4, self.RULE_expr, _p)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 125
-            self.mul(0)
+            self.state = 91
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,7,self._ctx)
+            if la_ == 1:
+                localctx = ProjectGrammarParser.NegationContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
+
+                self.state = 75
+                self.match(ProjectGrammarParser.SUB)
+                self.state = 76
+                self.expr(15)
+                pass
+
+            elif la_ == 2:
+                localctx = ProjectGrammarParser.NotContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
+                self.state = 77
+                self.match(ProjectGrammarParser.NOT)
+                self.state = 78
+                self.expr(14)
+                pass
+
+            elif la_ == 3:
+                localctx = ProjectGrammarParser.AssignmentContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
+                self.state = 79
+                self.match(ProjectGrammarParser.IDENTIFIER)
+                self.state = 80
+                self.match(ProjectGrammarParser.T__11)
+                self.state = 81
+                self.expr(7)
+                pass
+
+            elif la_ == 4:
+                localctx = ProjectGrammarParser.ParensContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
+                self.state = 82
+                self.match(ProjectGrammarParser.T__7)
+                self.state = 83
+                self.expr(0)
+                self.state = 84
+                self.match(ProjectGrammarParser.T__8)
+                pass
+
+            elif la_ == 5:
+                localctx = ProjectGrammarParser.IntContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
+                self.state = 86
+                self.match(ProjectGrammarParser.INT)
+                pass
+
+            elif la_ == 6:
+                localctx = ProjectGrammarParser.FloatContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
+                self.state = 87
+                self.match(ProjectGrammarParser.FLOAT)
+                pass
+
+            elif la_ == 7:
+                localctx = ProjectGrammarParser.BoolContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
+                self.state = 88
+                self.match(ProjectGrammarParser.BOOL)
+                pass
+
+            elif la_ == 8:
+                localctx = ProjectGrammarParser.StringContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
+                self.state = 89
+                self.match(ProjectGrammarParser.STRING)
+                pass
+
+            elif la_ == 9:
+                localctx = ProjectGrammarParser.IdContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
+                self.state = 90
+                self.match(ProjectGrammarParser.IDENTIFIER)
+                pass
+
+
             self._ctx.stop = self._input.LT(-1)
-            self.state = 132
+            self.state = 113
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,9,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
@@ -939,22 +1138,113 @@ class ProjectGrammarParser ( Parser ):
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
-                    localctx = ProjectGrammarParser.AddContext(self, _parentctx, _parentState)
-                    self.pushNewRecursionContext(localctx, _startState, self.RULE_add)
-                    self.state = 127
-                    if not self.precpred(self._ctx, 2):
-                        from antlr4.error.Errors import FailedPredicateException
-                        raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                    self.state = 128
-                    _la = self._input.LA(1)
-                    if not(_la==4 or _la==5):
-                        self._errHandler.recoverInline(self)
-                    else:
-                        self._errHandler.reportMatch(self)
-                        self.consume()
-                    self.state = 129
-                    self.mul(0) 
-                self.state = 134
+                    self.state = 111
+                    self._errHandler.sync(self)
+                    la_ = self._interp.adaptivePredict(self._input,8,self._ctx)
+                    if la_ == 1:
+                        localctx = ProjectGrammarParser.MulDivModContext(self, ProjectGrammarParser.ExprContext(self, _parentctx, _parentState))
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
+                        self.state = 93
+                        if not self.precpred(self._ctx, 13):
+                            from antlr4.error.Errors import FailedPredicateException
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 13)")
+                        self.state = 94
+                        localctx.op = self._input.LT(1)
+                        _la = self._input.LA(1)
+                        if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 3670016) != 0)):
+                            localctx.op = self._errHandler.recoverInline(self)
+                        else:
+                            self._errHandler.reportMatch(self)
+                            self.consume()
+                        self.state = 95
+                        self.expr(14)
+                        pass
+
+                    elif la_ == 2:
+                        localctx = ProjectGrammarParser.AddSubConcatContext(self, ProjectGrammarParser.ExprContext(self, _parentctx, _parentState))
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
+                        self.state = 96
+                        if not self.precpred(self._ctx, 12):
+                            from antlr4.error.Errors import FailedPredicateException
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 12)")
+                        self.state = 97
+                        localctx.op = self._input.LT(1)
+                        _la = self._input.LA(1)
+                        if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 4587520) != 0)):
+                            localctx.op = self._errHandler.recoverInline(self)
+                        else:
+                            self._errHandler.reportMatch(self)
+                            self.consume()
+                        self.state = 98
+                        self.expr(13)
+                        pass
+
+                    elif la_ == 3:
+                        localctx = ProjectGrammarParser.RelationContext(self, ProjectGrammarParser.ExprContext(self, _parentctx, _parentState))
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
+                        self.state = 99
+                        if not self.precpred(self._ctx, 11):
+                            from antlr4.error.Errors import FailedPredicateException
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 11)")
+                        self.state = 100
+                        localctx.op = self._input.LT(1)
+                        _la = self._input.LA(1)
+                        if not(_la==23 or _la==24):
+                            localctx.op = self._errHandler.recoverInline(self)
+                        else:
+                            self._errHandler.reportMatch(self)
+                            self.consume()
+                        self.state = 101
+                        self.expr(12)
+                        pass
+
+                    elif la_ == 4:
+                        localctx = ProjectGrammarParser.ComparisonContext(self, ProjectGrammarParser.ExprContext(self, _parentctx, _parentState))
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
+                        self.state = 102
+                        if not self.precpred(self._ctx, 10):
+                            from antlr4.error.Errors import FailedPredicateException
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 10)")
+                        self.state = 103
+                        localctx.op = self._input.LT(1)
+                        _la = self._input.LA(1)
+                        if not(_la==25 or _la==26):
+                            localctx.op = self._errHandler.recoverInline(self)
+                        else:
+                            self._errHandler.reportMatch(self)
+                            self.consume()
+                        self.state = 104
+                        self.expr(11)
+                        pass
+
+                    elif la_ == 5:
+                        localctx = ProjectGrammarParser.LogicAndContext(self, ProjectGrammarParser.ExprContext(self, _parentctx, _parentState))
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
+                        self.state = 105
+                        if not self.precpred(self._ctx, 9):
+                            from antlr4.error.Errors import FailedPredicateException
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 9)")
+                        self.state = 106
+                        self.match(ProjectGrammarParser.AND)
+                        self.state = 107
+                        self.expr(10)
+                        pass
+
+                    elif la_ == 6:
+                        localctx = ProjectGrammarParser.LogicOrContext(self, ProjectGrammarParser.ExprContext(self, _parentctx, _parentState))
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
+                        self.state = 108
+                        if not self.precpred(self._ctx, 8):
+                            from antlr4.error.Errors import FailedPredicateException
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 8)")
+                        self.state = 109
+                        self.match(ProjectGrammarParser.OR)
+                        self.state = 110
+                        self.expr(9)
+                        pass
+
+             
+                self.state = 115
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,9,self._ctx)
 
@@ -967,672 +1257,48 @@ class ProjectGrammarParser ( Parser ):
         return localctx
 
 
-    class MulContext(ParserRuleContext):
+    class PrimitiveTypeContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def unary(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.UnaryContext,0)
-
-
-        def mul(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.MulContext,0)
-
-
-        def MOD(self):
-            return self.getToken(ProjectGrammarParser.MOD, 0)
 
         def getRuleIndex(self):
-            return ProjectGrammarParser.RULE_mul
+            return ProjectGrammarParser.RULE_primitiveType
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterMul" ):
-                listener.enterMul(self)
+            if hasattr( listener, "enterPrimitiveType" ):
+                listener.enterPrimitiveType(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitMul" ):
-                listener.exitMul(self)
+            if hasattr( listener, "exitPrimitiveType" ):
+                listener.exitPrimitiveType(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMul" ):
-                return visitor.visitMul(self)
+            if hasattr( visitor, "visitPrimitiveType" ):
+                return visitor.visitPrimitiveType(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
-    def mul(self, _p:int=0):
-        _parentctx = self._ctx
-        _parentState = self.state
-        localctx = ProjectGrammarParser.MulContext(self, self._ctx, _parentState)
-        _prevctx = localctx
-        _startState = 20
-        self.enterRecursionRule(localctx, 20, self.RULE_mul, _p)
+
+    def primitiveType(self):
+
+        localctx = ProjectGrammarParser.PrimitiveTypeContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 6, self.RULE_primitiveType)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 136
-            self.unary()
-            self._ctx.stop = self._input.LT(-1)
-            self.state = 143
-            self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,10,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
-                    if self._parseListeners is not None:
-                        self.triggerExitRuleEvent()
-                    _prevctx = localctx
-                    localctx = ProjectGrammarParser.MulContext(self, _parentctx, _parentState)
-                    self.pushNewRecursionContext(localctx, _startState, self.RULE_mul)
-                    self.state = 138
-                    if not self.precpred(self._ctx, 2):
-                        from antlr4.error.Errors import FailedPredicateException
-                        raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                    self.state = 139
-                    _la = self._input.LA(1)
-                    if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 65728) != 0)):
-                        self._errHandler.recoverInline(self)
-                    else:
-                        self._errHandler.reportMatch(self)
-                        self.consume()
-                    self.state = 140
-                    self.unary() 
-                self.state = 145
-                self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,10,self._ctx)
-
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.unrollRecursionContexts(_parentctx)
-        return localctx
-
-
-    class UnaryContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def NOT(self):
-            return self.getToken(ProjectGrammarParser.NOT, 0)
-
-        def unary(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.UnaryContext,0)
-
-
-        def primary(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.PrimaryContext,0)
-
-
-        def getRuleIndex(self):
-            return ProjectGrammarParser.RULE_unary
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterUnary" ):
-                listener.enterUnary(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitUnary" ):
-                listener.exitUnary(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitUnary" ):
-                return visitor.visitUnary(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def unary(self):
-
-        localctx = ProjectGrammarParser.UnaryContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 22, self.RULE_unary)
-        try:
-            self.state = 151
-            self._errHandler.sync(self)
-            token = self._input.LA(1)
-            if token in [21]:
-                self.enterOuterAlt(localctx, 1)
-                self.state = 146
-                self.match(ProjectGrammarParser.NOT)
-                self.state = 147
-                self.unary()
-                pass
-            elif token in [5]:
-                self.enterOuterAlt(localctx, 2)
-                self.state = 148
-                self.match(ProjectGrammarParser.T__4)
-                self.state = 149
-                self.unary()
-                pass
-            elif token in [8, 24, 25, 26, 27, 28]:
-                self.enterOuterAlt(localctx, 3)
-                self.state = 150
-                self.primary()
-                pass
-            else:
-                raise NoViableAltException(self)
-
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class PrimaryContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def INT(self):
-            return self.getToken(ProjectGrammarParser.INT, 0)
-
-        def FLOAT(self):
-            return self.getToken(ProjectGrammarParser.FLOAT, 0)
-
-        def STRING(self):
-            return self.getToken(ProjectGrammarParser.STRING, 0)
-
-        def BOOL(self):
-            return self.getToken(ProjectGrammarParser.BOOL, 0)
-
-        def ID(self):
-            return self.getToken(ProjectGrammarParser.ID, 0)
-
-        def expr(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.ExprContext,0)
-
-
-        def getRuleIndex(self):
-            return ProjectGrammarParser.RULE_primary
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPrimary" ):
-                listener.enterPrimary(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPrimary" ):
-                listener.exitPrimary(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPrimary" ):
-                return visitor.visitPrimary(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def primary(self):
-
-        localctx = ProjectGrammarParser.PrimaryContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 24, self.RULE_primary)
-        try:
-            self.state = 162
-            self._errHandler.sync(self)
-            token = self._input.LA(1)
-            if token in [25]:
-                self.enterOuterAlt(localctx, 1)
-                self.state = 153
-                self.match(ProjectGrammarParser.INT)
-                pass
-            elif token in [26]:
-                self.enterOuterAlt(localctx, 2)
-                self.state = 154
-                self.match(ProjectGrammarParser.FLOAT)
-                pass
-            elif token in [27]:
-                self.enterOuterAlt(localctx, 3)
-                self.state = 155
-                self.match(ProjectGrammarParser.STRING)
-                pass
-            elif token in [28]:
-                self.enterOuterAlt(localctx, 4)
-                self.state = 156
-                self.match(ProjectGrammarParser.BOOL)
-                pass
-            elif token in [24]:
-                self.enterOuterAlt(localctx, 5)
-                self.state = 157
-                self.match(ProjectGrammarParser.ID)
-                pass
-            elif token in [8]:
-                self.enterOuterAlt(localctx, 6)
-                self.state = 158
-                self.match(ProjectGrammarParser.T__7)
-                self.state = 159
-                self.expr()
-                self.state = 160
-                self.match(ProjectGrammarParser.T__8)
-                pass
-            else:
-                raise NoViableAltException(self)
-
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class Id_listContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def ID(self, i:int=None):
-            if i is None:
-                return self.getTokens(ProjectGrammarParser.ID)
-            else:
-                return self.getToken(ProjectGrammarParser.ID, i)
-
-        def getRuleIndex(self):
-            return ProjectGrammarParser.RULE_id_list
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterId_list" ):
-                listener.enterId_list(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitId_list" ):
-                listener.exitId_list(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitId_list" ):
-                return visitor.visitId_list(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def id_list(self):
-
-        localctx = ProjectGrammarParser.Id_listContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 26, self.RULE_id_list)
-        self._la = 0 # Token type
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 164
-            self.match(ProjectGrammarParser.ID)
-            self.state = 169
-            self._errHandler.sync(self)
+            self.state = 116
             _la = self._input.LA(1)
-            while _la==3:
-                self.state = 165
-                self.match(ProjectGrammarParser.T__2)
-                self.state = 166
-                self.match(ProjectGrammarParser.ID)
-                self.state = 171
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class VarContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def TYPE(self):
-            return self.getToken(ProjectGrammarParser.TYPE, 0)
-
-        def id_list(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.Id_listContext,0)
-
-
-        def SEMI(self):
-            return self.getToken(ProjectGrammarParser.SEMI, 0)
-
-        def getRuleIndex(self):
-            return ProjectGrammarParser.RULE_var
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterVar" ):
-                listener.enterVar(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitVar" ):
-                listener.exitVar(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitVar" ):
-                return visitor.visitVar(self)
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 122880) != 0)):
+                self._errHandler.recoverInline(self)
             else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def var(self):
-
-        localctx = ProjectGrammarParser.VarContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 28, self.RULE_var)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 172
-            self.match(ProjectGrammarParser.TYPE)
-            self.state = 173
-            self.id_list()
-            self.state = 174
-            self.match(ProjectGrammarParser.SEMI)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class ReadContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def id_list(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.Id_listContext,0)
-
-
-        def SEMI(self):
-            return self.getToken(ProjectGrammarParser.SEMI, 0)
-
-        def getRuleIndex(self):
-            return ProjectGrammarParser.RULE_read
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRead" ):
-                listener.enterRead(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRead" ):
-                listener.exitRead(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRead" ):
-                return visitor.visitRead(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def read(self):
-
-        localctx = ProjectGrammarParser.ReadContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 30, self.RULE_read)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 176
-            self.match(ProjectGrammarParser.T__9)
-            self.state = 177
-            self.id_list()
-            self.state = 178
-            self.match(ProjectGrammarParser.SEMI)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class WriteContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def expr_list(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.Expr_listContext,0)
-
-
-        def SEMI(self):
-            return self.getToken(ProjectGrammarParser.SEMI, 0)
-
-        def getRuleIndex(self):
-            return ProjectGrammarParser.RULE_write
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterWrite" ):
-                listener.enterWrite(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitWrite" ):
-                listener.exitWrite(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitWrite" ):
-                return visitor.visitWrite(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def write(self):
-
-        localctx = ProjectGrammarParser.WriteContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 32, self.RULE_write)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 180
-            self.match(ProjectGrammarParser.T__10)
-            self.state = 181
-            self.expr_list()
-            self.state = 182
-            self.match(ProjectGrammarParser.SEMI)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class IfContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def condition(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.ConditionContext,0)
-
-
-        def statement(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(ProjectGrammarParser.StatementContext)
-            else:
-                return self.getTypedRuleContext(ProjectGrammarParser.StatementContext,i)
-
-
-        def getRuleIndex(self):
-            return ProjectGrammarParser.RULE_if
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterIf" ):
-                listener.enterIf(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitIf" ):
-                listener.exitIf(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitIf" ):
-                return visitor.visitIf(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def if_(self):
-
-        localctx = ProjectGrammarParser.IfContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 34, self.RULE_if)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 184
-            self.match(ProjectGrammarParser.T__11)
-            self.state = 185
-            self.match(ProjectGrammarParser.T__7)
-            self.state = 186
-            self.condition()
-            self.state = 187
-            self.match(ProjectGrammarParser.T__8)
-            self.state = 188
-            self.statement()
-            self.state = 191
-            self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,14,self._ctx)
-            if la_ == 1:
-                self.state = 189
-                self.match(ProjectGrammarParser.T__12)
-                self.state = 190
-                self.statement()
-
-
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class WhileContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def condition(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.ConditionContext,0)
-
-
-        def statement(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.StatementContext,0)
-
-
-        def getRuleIndex(self):
-            return ProjectGrammarParser.RULE_while
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterWhile" ):
-                listener.enterWhile(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitWhile" ):
-                listener.exitWhile(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitWhile" ):
-                return visitor.visitWhile(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def while_(self):
-
-        localctx = ProjectGrammarParser.WhileContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 36, self.RULE_while)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 193
-            self.match(ProjectGrammarParser.T__13)
-            self.state = 194
-            self.match(ProjectGrammarParser.T__7)
-            self.state = 195
-            self.condition()
-            self.state = 196
-            self.match(ProjectGrammarParser.T__8)
-            self.state = 197
-            self.statement()
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class ConditionContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def expr(self):
-            return self.getTypedRuleContext(ProjectGrammarParser.ExprContext,0)
-
-
-        def getRuleIndex(self):
-            return ProjectGrammarParser.RULE_condition
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCondition" ):
-                listener.enterCondition(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCondition" ):
-                listener.exitCondition(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCondition" ):
-                return visitor.visitCondition(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def condition(self):
-
-        localctx = ProjectGrammarParser.ConditionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 38, self.RULE_condition)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 199
-            self.expr()
+                self._errHandler.reportMatch(self)
+                self.consume()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1646,46 +1312,36 @@ class ProjectGrammarParser ( Parser ):
     def sempred(self, localctx:RuleContext, ruleIndex:int, predIndex:int):
         if self._predicates == None:
             self._predicates = dict()
-        self._predicates[5] = self.logic_sempred
-        self._predicates[6] = self.equality_sempred
-        self._predicates[7] = self.relation_sempred
-        self._predicates[8] = self.concat_sempred
-        self._predicates[9] = self.add_sempred
-        self._predicates[10] = self.mul_sempred
+        self._predicates[2] = self.expr_sempred
         pred = self._predicates.get(ruleIndex, None)
         if pred is None:
             raise Exception("No predicate with index:" + str(ruleIndex))
         else:
             return pred(localctx, predIndex)
 
-    def logic_sempred(self, localctx:LogicContext, predIndex:int):
+    def expr_sempred(self, localctx:ExprContext, predIndex:int):
             if predIndex == 0:
-                return self.precpred(self._ctx, 2)
+                return self.precpred(self._ctx, 13)
          
 
-    def equality_sempred(self, localctx:EqualityContext, predIndex:int):
             if predIndex == 1:
-                return self.precpred(self._ctx, 2)
+                return self.precpred(self._ctx, 12)
          
 
-    def relation_sempred(self, localctx:RelationContext, predIndex:int):
             if predIndex == 2:
-                return self.precpred(self._ctx, 2)
+                return self.precpred(self._ctx, 11)
          
 
-    def concat_sempred(self, localctx:ConcatContext, predIndex:int):
             if predIndex == 3:
-                return self.precpred(self._ctx, 2)
+                return self.precpred(self._ctx, 10)
          
 
-    def add_sempred(self, localctx:AddContext, predIndex:int):
             if predIndex == 4:
-                return self.precpred(self._ctx, 2)
+                return self.precpred(self._ctx, 9)
          
 
-    def mul_sempred(self, localctx:MulContext, predIndex:int):
             if predIndex == 5:
-                return self.precpred(self._ctx, 2)
+                return self.precpred(self._ctx, 8)
          
 
 

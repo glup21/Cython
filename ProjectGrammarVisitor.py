@@ -14,73 +14,18 @@ class ProjectGrammarVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by ProjectGrammarParser#statement.
-    def visitStatement(self, ctx:ProjectGrammarParser.StatementContext):
+    # Visit a parse tree produced by ProjectGrammarParser#emptyStatement.
+    def visitEmptyStatement(self, ctx:ProjectGrammarParser.EmptyStatementContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by ProjectGrammarParser#expr.
-    def visitExpr(self, ctx:ProjectGrammarParser.ExprContext):
+    # Visit a parse tree produced by ProjectGrammarParser#declaration.
+    def visitDeclaration(self, ctx:ProjectGrammarParser.DeclarationContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by ProjectGrammarParser#expr_list.
-    def visitExpr_list(self, ctx:ProjectGrammarParser.Expr_listContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by ProjectGrammarParser#assignment.
-    def visitAssignment(self, ctx:ProjectGrammarParser.AssignmentContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by ProjectGrammarParser#logic.
-    def visitLogic(self, ctx:ProjectGrammarParser.LogicContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by ProjectGrammarParser#equality.
-    def visitEquality(self, ctx:ProjectGrammarParser.EqualityContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by ProjectGrammarParser#relation.
-    def visitRelation(self, ctx:ProjectGrammarParser.RelationContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by ProjectGrammarParser#concat.
-    def visitConcat(self, ctx:ProjectGrammarParser.ConcatContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by ProjectGrammarParser#add.
-    def visitAdd(self, ctx:ProjectGrammarParser.AddContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by ProjectGrammarParser#mul.
-    def visitMul(self, ctx:ProjectGrammarParser.MulContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by ProjectGrammarParser#unary.
-    def visitUnary(self, ctx:ProjectGrammarParser.UnaryContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by ProjectGrammarParser#primary.
-    def visitPrimary(self, ctx:ProjectGrammarParser.PrimaryContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by ProjectGrammarParser#id_list.
-    def visitId_list(self, ctx:ProjectGrammarParser.Id_listContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by ProjectGrammarParser#var.
-    def visitVar(self, ctx:ProjectGrammarParser.VarContext):
+    # Visit a parse tree produced by ProjectGrammarParser#printExpr.
+    def visitPrintExpr(self, ctx:ProjectGrammarParser.PrintExprContext):
         return self.visitChildren(ctx)
 
 
@@ -94,18 +39,98 @@ class ProjectGrammarVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by ProjectGrammarParser#if.
-    def visitIf(self, ctx:ProjectGrammarParser.IfContext):
+    # Visit a parse tree produced by ProjectGrammarParser#statementsBlock.
+    def visitStatementsBlock(self, ctx:ProjectGrammarParser.StatementsBlockContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by ProjectGrammarParser#while.
-    def visitWhile(self, ctx:ProjectGrammarParser.WhileContext):
+    # Visit a parse tree produced by ProjectGrammarParser#ifStatement.
+    def visitIfStatement(self, ctx:ProjectGrammarParser.IfStatementContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by ProjectGrammarParser#condition.
-    def visitCondition(self, ctx:ProjectGrammarParser.ConditionContext):
+    # Visit a parse tree produced by ProjectGrammarParser#whileStatement.
+    def visitWhileStatement(self, ctx:ProjectGrammarParser.WhileStatementContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by ProjectGrammarParser#mulDivMod.
+    def visitMulDivMod(self, ctx:ProjectGrammarParser.MulDivModContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by ProjectGrammarParser#negation.
+    def visitNegation(self, ctx:ProjectGrammarParser.NegationContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by ProjectGrammarParser#parens.
+    def visitParens(self, ctx:ProjectGrammarParser.ParensContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by ProjectGrammarParser#comparison.
+    def visitComparison(self, ctx:ProjectGrammarParser.ComparisonContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by ProjectGrammarParser#bool.
+    def visitBool(self, ctx:ProjectGrammarParser.BoolContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by ProjectGrammarParser#string.
+    def visitString(self, ctx:ProjectGrammarParser.StringContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by ProjectGrammarParser#addSubConcat.
+    def visitAddSubConcat(self, ctx:ProjectGrammarParser.AddSubConcatContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by ProjectGrammarParser#assignment.
+    def visitAssignment(self, ctx:ProjectGrammarParser.AssignmentContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by ProjectGrammarParser#logicOr.
+    def visitLogicOr(self, ctx:ProjectGrammarParser.LogicOrContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by ProjectGrammarParser#float.
+    def visitFloat(self, ctx:ProjectGrammarParser.FloatContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by ProjectGrammarParser#int.
+    def visitInt(self, ctx:ProjectGrammarParser.IntContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by ProjectGrammarParser#relation.
+    def visitRelation(self, ctx:ProjectGrammarParser.RelationContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by ProjectGrammarParser#not.
+    def visitNot(self, ctx:ProjectGrammarParser.NotContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by ProjectGrammarParser#logicAnd.
+    def visitLogicAnd(self, ctx:ProjectGrammarParser.LogicAndContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by ProjectGrammarParser#id.
+    def visitId(self, ctx:ProjectGrammarParser.IdContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by ProjectGrammarParser#primitiveType.
+    def visitPrimitiveType(self, ctx:ProjectGrammarParser.PrimitiveTypeContext):
         return self.visitChildren(ctx)
 
 
