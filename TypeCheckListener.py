@@ -23,9 +23,6 @@ class TypeCheckListener(ParseTreeListener):
         # For nodes values - ctx : object
         self.nodes_values = {}
 
-        # Output instructions
-        self.result = ''
-
         self.errors = []
 
     def addError(self, ctx, message):
@@ -134,7 +131,10 @@ class TypeCheckListener(ParseTreeListener):
         left_type = self.nodes_table[left]
         right_type = self.nodes_table[right]
 
-        if not left_type.isNumeric() or not right_type.isNumeric():
+        if ctx.op.text == '%':
+            if left_type != Type.INT or right_type != Type.INT:
+                self.addError(ctx, 'Operands in MOD operation must be integers.')
+        elif not left_type.isNumeric() or not right_type.isNumeric():
             self.addError(ctx, 'Operands in mathematical expressions must be numeric.')
 
         res_type = Type.INT if left_type == Type.INT and right_type == Type.INT else Type.FLOAT
@@ -149,7 +149,7 @@ class TypeCheckListener(ParseTreeListener):
     def exitNegation(self, ctx:ProjectGrammarParser.NegationContext):
         expr_type = self.nodes_table.get(ctx.expr())  
 
-        if expr_type not in (Type.INT, Type.FLOAT):
+        if not expr_type.isNumeric():
             self.addError(ctx, 'Negation can only be applied to numeric expressions.')
 
         self.nodes_table[ctx] = expr_type

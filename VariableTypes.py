@@ -35,7 +35,7 @@ class Type(Enum):
         if self == Type.FLOAT:
             return 0.0
         if self == Type.STRING:
-            return ""
+            return "\"\""
         if self == Type.BOOL:
             return False
         
@@ -53,3 +53,9 @@ class Type(Enum):
         if self == Type.INT or self == Type.FLOAT:
             return True
         return False
+    
+    def toSuffix(self):
+        if self == Type.INT:    return 'I'
+        if self == Type.FLOAT:  return 'F'
+        if self == Type.STRING: return 'S'
+        if self == Type.BOOL:   return 'B'

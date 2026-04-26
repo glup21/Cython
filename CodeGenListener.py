@@ -4,39 +4,10 @@ if "." in __name__:
     from .ProjectGrammarParser import ProjectGrammarParser
 else:
     from ProjectGrammarParser import ProjectGrammarParser
-from enum import Enum
-
-class Type(Enum):
-    INT = 0
-    FLOAT = 1
-    STRING = 2
-    BOOL = 3
-
-    @staticmethod
-    def stringToType(s):
-        if s == 'int':
-            return Type.INT
-        if s == 'float':
-            return Type.FLOAT
-        if s == 'string':
-            return Type.STRING
-        if s == 'bool':
-            return Type.BOOL
-
-        raise Exception(f"Unknown type: {s}")
-    
-def parseType(v):
-    if type(v) == float:
-        return Type.FLOAT
-    if type(v) == int:
-        return Type.INT
-    if type(v) == str:
-        return Type.STRING
-    if type(v) == bool:
-        return Type.BOOL
+from VariableTypes import Type
 
 # This class defines a complete listener for a parse tree produced by ProjectGrammarParser.
-class ProjectGrammarListener(ParseTreeListener):
+class CodeGenListener(ParseTreeListener):
 
     def __init__(self):
         # For variable types - string : enum 
@@ -54,8 +25,25 @@ class ProjectGrammarListener(ParseTreeListener):
         # Output instructions
         self.result = ''
 
-        self.type_exceptions = {}
+        self.label_id = 1
+        self.if_stack = []
+        self.pending = {}
 
+    def addLine(self, s : str):
+        self.result += s + '\n'
+
+    def getLabelId(self):
+        res = self.label_id
+        self.label_id += 1
+
+        return res
+
+    def enterEveryRule(self, ctx):
+        if ctx in self.pending:
+            for line in self.pending[ctx]:
+                self.addLine(line)
+            del self.pending[ctx]
+        return super().enterEveryRule(ctx)
 
     # Enter a parse tree produced by ProjectGrammarParser#prog.
     def enterProg(self, ctx:ProjectGrammarParser.ProgContext):
@@ -81,15 +69,14 @@ class ProjectGrammarListener(ParseTreeListener):
 
     # Exit a parse tree produced by ProjectGrammarParser#declaration.
     def exitDeclaration(self, ctx:ProjectGrammarParser.DeclarationContext):
-        type = Type.stringToType(ctx.primitiveType().getText())
-        name = ctx.getText()
-
-        if name in self.types_table:
-            self.errors.append(f'{ctx.start.line}:{ctx.start.column} Variable {name} is already declared!')
-            return 
+        res_type = Type.stringToType(ctx.primitiveType().getText())
+        value = res_type.getDefaultValue()
 
         for id in ctx.IDENTIFIER():
-            id_type = Type.parseType(id.getText())
+            name = id.getText()
+            self.types_table[name] = res_type 
+            self.addLine(f'push {res_type.toSuffix()} {value}')
+            self.addLine(f'save {name}')
 
 
     # Enter a parse tree produced by ProjectGrammarParser#printExpr.
@@ -98,7 +85,7 @@ class ProjectGrammarListener(ParseTreeListener):
 
     # Exit a parse tree produced by ProjectGrammarParser#printExpr.
     def exitPrintExpr(self, ctx:ProjectGrammarParser.PrintExprContext):
-        pass
+        self.addLine(f'pop')
 
 
     # Enter a parse tree produced by ProjectGrammarParser#read.
@@ -107,7 +94,9 @@ class ProjectGrammarListener(ParseTreeListener):
 
     # Exit a parse tree produced by ProjectGrammarParser#read.
     def exitRead(self, ctx:ProjectGrammarParser.ReadContext):
-        pass
+        for id in ctx.IDENTIFIER():
+            self.addLine(f'read {self.types_table[id.getText()].toSuffix()}')
+            self.addLine(f'save {id.getText()}')
 
 
     # Enter a parse tree produced by ProjectGrammarParser#write.
@@ -116,7 +105,8 @@ class ProjectGrammarListener(ParseTreeListener):
 
     # Exit a parse tree produced by ProjectGrammarParser#write.
     def exitWrite(self, ctx:ProjectGrammarParser.WriteContext):
-        pass
+        self.addLine(f'print {len(ctx.expr())}')
+            
 
 
     # Enter a parse tree produced by ProjectGrammarParser#statementsBlock.
@@ -130,20 +120,40 @@ class ProjectGrammarListener(ParseTreeListener):
 
     # Enter a parse tree produced by ProjectGrammarParser#ifStatement.
     def enterIfStatement(self, ctx:ProjectGrammarParser.IfStatementContext):
-        pass
+        false_id = self.getLabelId()
+        end_id = self.getLabelId()
+        self.if_stack.append((false_id, end_id))
+
+        has_else = ctx.statement(1) is not None
+
+        self.pending[ctx.statement(0)] = [f'fjmp {false_id}']
+
+        if has_else:
+            self.pending[ctx.statement(1)] = [f'jmp {end_id}', f'label {false_id}']
 
     # Exit a parse tree produced by ProjectGrammarParser#ifStatement.
     def exitIfStatement(self, ctx:ProjectGrammarParser.IfStatementContext):
-        pass
-
+        false_id, end_id = self.if_stack.pop()
+        has_else = ctx.statement(1) is not None
+        if has_else:
+            self.addLine(f'label {end_id}')
+        else:
+            self.addLine(f'label {false_id}')
 
     # Enter a parse tree produced by ProjectGrammarParser#whileStatement.
     def enterWhileStatement(self, ctx:ProjectGrammarParser.WhileStatementContext):
-        pass
+        start_id = self.newLabel()
+        end_id = self.newLabel()
+        self.if_stack.append((start_id, end_id))
 
-    # Exit a parse tree produced by ProjectGrammarParser#whileStatement.
+        self.addLine(f'label {start_id}')
+       
+        self.pending[ctx.statement()] = [f'fjmp {end_id}']
+
     def exitWhileStatement(self, ctx:ProjectGrammarParser.WhileStatementContext):
-        pass
+        start_id, end_id = self.if_stack.pop()
+        self.addLine(f'jmp {start_id}')
+        self.addLine(f'label {end_id}')
 
 
     # Enter a parse tree produced by ProjectGrammarParser#mulDivMod.
@@ -152,7 +162,39 @@ class ProjectGrammarListener(ParseTreeListener):
 
     # Exit a parse tree produced by ProjectGrammarParser#mulDivMod.
     def exitMulDivMod(self, ctx:ProjectGrammarParser.MulDivModContext):
-        pass
+        left = ctx.expr()[0]
+        right = ctx.expr()[1]
+
+        res_type = Type.FLOAT
+        if self.nodes_table[left] == Type.INT and self.nodes_table[right] == Type.FLOAT:
+            # Save Right to a variable
+            self.addLine('save _tmp')
+
+            # Convert Left to float
+            self.addLine('itof')
+
+            # Return Right back to stack
+            self.addLine('load _tmp')
+
+            res_type = Type.FLOAT
+
+        elif self.nodes_table[left] == Type.FLOAT and self.nodes_table[right] == Type.INT:
+            # Convert Right to float
+            self.addLine('itof')
+            res_type = Type.FLOAT
+
+        elif self.nodes_table[left] == Type.INT and self.nodes_table[right] == Type.INT:
+            res_type = Type.INT
+
+        if ctx.op.text == '*':
+            self.addLine(f'mul {res_type.toSuffix()}')
+        elif ctx.op.text == '/':
+            self.addLine(f'div {res_type.toSuffix()}')
+        elif ctx.op.text == '%':
+            self.addLine('mod')
+            res_type = Type.INT
+
+        self.nodes_table[ctx] = res_type
 
 
     # Enter a parse tree produced by ProjectGrammarParser#negation.
@@ -161,7 +203,10 @@ class ProjectGrammarListener(ParseTreeListener):
 
     # Exit a parse tree produced by ProjectGrammarParser#negation.
     def exitNegation(self, ctx:ProjectGrammarParser.NegationContext):
-        pass
+        res_type = self.nodes_table[ctx.expr()]
+        self.addLine(f'uminus {res_type.toSuffix()}')
+        self.nodes_table[ctx] = res_type
+
 
 
     # Enter a parse tree produced by ProjectGrammarParser#parens.
@@ -170,7 +215,7 @@ class ProjectGrammarListener(ParseTreeListener):
 
     # Exit a parse tree produced by ProjectGrammarParser#parens.
     def exitParens(self, ctx:ProjectGrammarParser.ParensContext):
-        pass
+        self.nodes_table[ctx] = self.nodes_table[ctx.expr()]
 
 
     # Enter a parse tree produced by ProjectGrammarParser#comparison.
@@ -179,7 +224,38 @@ class ProjectGrammarListener(ParseTreeListener):
 
     # Exit a parse tree produced by ProjectGrammarParser#comparison.
     def exitComparison(self, ctx:ProjectGrammarParser.ComparisonContext):
-        pass
+        left = ctx.expr()[0]
+        right = ctx.expr()[1]
+
+        res_type = Type.FLOAT
+        if self.nodes_table[left] == Type.INT and self.nodes_table[right] == Type.FLOAT:
+            # Save Right to a variable
+            self.addLine('save _tmp')
+
+            # Convert Left to float
+            self.addLine('itof')
+
+            # Return Right back to stack
+            self.addLine('load _tmp')
+
+            res_type = Type.FLOAT
+
+        elif self.nodes_table[left] == Type.FLOAT and self.nodes_table[right] == Type.INT:
+            # Convert Right to float
+            self.addLine('itof')
+            res_type = Type.FLOAT
+
+        elif self.nodes_table[left] == Type.INT and self.nodes_table[right] == Type.INT:
+            res_type = Type.INT
+
+        elif self.nodes_table[left] == Type.STRING and self.nodes_table[right] == Type.STRING:
+            res_type = Type.STRING
+
+        self.addLine(f'eq {res_type.toSuffix()}')
+        if ctx.op.text == '!=':
+            self.addLine('not')
+
+        self.nodes_table[ctx] = Type.BOOL
 
 
     # Enter a parse tree produced by ProjectGrammarParser#bool.
@@ -188,7 +264,9 @@ class ProjectGrammarListener(ParseTreeListener):
 
     # Exit a parse tree produced by ProjectGrammarParser#bool.
     def exitBool(self, ctx:ProjectGrammarParser.BoolContext):
-        pass
+        value = ctx.getText()
+        self.addLine(f'push B {value}')
+        self.nodes_table[ctx] = Type.BOOL
 
 
     # Enter a parse tree produced by ProjectGrammarParser#string.
@@ -197,7 +275,9 @@ class ProjectGrammarListener(ParseTreeListener):
 
     # Exit a parse tree produced by ProjectGrammarParser#string.
     def exitString(self, ctx:ProjectGrammarParser.StringContext):
-        pass
+        value = ctx.getText()
+        self.addLine(f'push S {value}')
+        self.nodes_table[ctx] = Type.STRING
 
 
     # Enter a parse tree produced by ProjectGrammarParser#addSubConcat.
@@ -206,7 +286,42 @@ class ProjectGrammarListener(ParseTreeListener):
 
     # Exit a parse tree produced by ProjectGrammarParser#addSubConcat.
     def exitAddSubConcat(self, ctx:ProjectGrammarParser.AddSubConcatContext):
-        pass
+        left = ctx.expr()[0]
+        right = ctx.expr()[1]
+
+        res_type = Type.FLOAT
+        if self.nodes_table[left] == Type.INT and self.nodes_table[right] == Type.FLOAT:
+            # Save Right to a variable
+            self.addLine('save _tmp')
+
+            # Convert Left to float
+            self.addLine('itof')
+
+            # Return Right back to stack
+            self.addLine('load _tmp')
+
+            res_type = Type.FLOAT
+
+        elif self.nodes_table[left] == Type.FLOAT and self.nodes_table[right] == Type.INT:
+            # Convert Right to float
+            self.addLine('itof')
+            res_type = Type.FLOAT
+
+        elif self.nodes_table[left] == Type.INT and self.nodes_table[right] == Type.INT:
+            res_type = Type.INT
+
+        elif self.nodes_table[left] == Type.STRING and self.nodes_table[right] == Type.STRING:
+            res_type = Type.STRING
+
+        if res_type.isNumeric():
+            if ctx.op.text == '+':
+                self.addLine(f'add {res_type.toSuffix()}')
+            elif ctx.op.text == '-':
+                self.addLine(f'sub {res_type.toSuffix()}')
+        elif res_type == Type.STRING:
+            self.addLine(f'concat')
+
+        self.nodes_table[ctx] = res_type
 
 
     # Enter a parse tree produced by ProjectGrammarParser#assignment.
@@ -215,7 +330,17 @@ class ProjectGrammarListener(ParseTreeListener):
 
     # Exit a parse tree produced by ProjectGrammarParser#assignment.
     def exitAssignment(self, ctx:ProjectGrammarParser.AssignmentContext):
-        pass
+        name = ctx.IDENTIFIER().getText()
+        var_type = self.types_table[name]
+        expr_type = self.nodes_table.get(ctx.expr())
+        
+        if var_type == Type.FLOAT and expr_type == Type.INT:
+            self.addLine('itof')
+        
+        self.nodes_table[ctx] = var_type
+        self.addLine(f'save {name}')
+        self.addLine(f'load {name}') 
+        
 
 
     # Enter a parse tree produced by ProjectGrammarParser#logicOr.
@@ -224,7 +349,8 @@ class ProjectGrammarListener(ParseTreeListener):
 
     # Exit a parse tree produced by ProjectGrammarParser#logicOr.
     def exitLogicOr(self, ctx:ProjectGrammarParser.LogicOrContext):
-        pass
+        self.addLine('or')
+        self.nodes_table[ctx] = Type.BOOL
 
 
     # Enter a parse tree produced by ProjectGrammarParser#float.
@@ -233,7 +359,9 @@ class ProjectGrammarListener(ParseTreeListener):
 
     # Exit a parse tree produced by ProjectGrammarParser#float.
     def exitFloat(self, ctx:ProjectGrammarParser.FloatContext):
-        pass
+        value = float(ctx.getText())
+        self.addLine(f'push F {value}')
+        self.nodes_table[ctx] = Type.FLOAT
 
 
     # Enter a parse tree produced by ProjectGrammarParser#int.
@@ -242,7 +370,9 @@ class ProjectGrammarListener(ParseTreeListener):
 
     # Exit a parse tree produced by ProjectGrammarParser#int.
     def exitInt(self, ctx:ProjectGrammarParser.IntContext):
-        pass
+        value = int(ctx.getText())
+        self.addLine(f'push I {value}')
+        self.nodes_table[ctx] = Type.INT
 
 
     # Enter a parse tree produced by ProjectGrammarParser#relation.
@@ -251,7 +381,34 @@ class ProjectGrammarListener(ParseTreeListener):
 
     # Exit a parse tree produced by ProjectGrammarParser#relation.
     def exitRelation(self, ctx:ProjectGrammarParser.RelationContext):
-        pass
+        left = ctx.expr()[0]
+        right = ctx.expr()[1]
+
+        res_type = Type.FLOAT
+        if self.nodes_table[left] == Type.INT and self.nodes_table[right] == Type.FLOAT:
+            # Save Right to a variable
+            self.addLine('save _tmp')
+
+            # Convert Left to float
+            self.addLine('itof')
+
+            # Return Right back to stack
+            self.addLine('load _tmp')
+
+        elif self.nodes_table[left] == Type.FLOAT and self.nodes_table[right] == Type.INT:
+            # Convert Right to float
+            self.addLine('itof')
+        elif self.nodes_table[left] == Type.INT and self.nodes_table[right] == Type.INT:
+            res_type = Type.INT
+
+        if ctx.op.text == '<':
+            self.addLine(f'lt {res_type.toSuffix()}')
+
+        if ctx.op.text == '>':
+            self.addLine(f'gt {res_type.toSuffix()}')
+
+        self.nodes_table[ctx] = Type.BOOL
+        
 
 
     # Enter a parse tree produced by ProjectGrammarParser#not.
@@ -260,8 +417,8 @@ class ProjectGrammarListener(ParseTreeListener):
 
     # Exit a parse tree produced by ProjectGrammarParser#not.
     def exitNot(self, ctx:ProjectGrammarParser.NotContext):
-        pass
-
+        self.nodes_table[ctx] = Type.BOOL
+        self.addLine(f'not')
 
     # Enter a parse tree produced by ProjectGrammarParser#logicAnd.
     def enterLogicAnd(self, ctx:ProjectGrammarParser.LogicAndContext):
@@ -269,7 +426,8 @@ class ProjectGrammarListener(ParseTreeListener):
 
     # Exit a parse tree produced by ProjectGrammarParser#logicAnd.
     def exitLogicAnd(self, ctx:ProjectGrammarParser.LogicAndContext):
-        pass
+        self.nodes_table[ctx] = Type.BOOL
+        self.addLine(f'and')
 
 
     # Enter a parse tree produced by ProjectGrammarParser#id.
@@ -278,7 +436,9 @@ class ProjectGrammarListener(ParseTreeListener):
 
     # Exit a parse tree produced by ProjectGrammarParser#id.
     def exitId(self, ctx:ProjectGrammarParser.IdContext):
-        pass
+        name = ctx.IDENTIFIER().getText()
+        self.nodes_table[ctx] = self.types_table[name]
+        self.addLine(f'load {name}')
 
 
     # Enter a parse tree produced by ProjectGrammarParser#primitiveType.
@@ -287,7 +447,7 @@ class ProjectGrammarListener(ParseTreeListener):
 
     # Exit a parse tree produced by ProjectGrammarParser#primitiveType.
     def exitPrimitiveType(self, ctx:ProjectGrammarParser.PrimitiveTypeContext):
-        pass
+        self.nodes_table[ctx] = Type.stringToType(ctx.type_.text)
 
 
 

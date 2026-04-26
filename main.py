@@ -3,6 +3,7 @@ from ProjectGrammarLexer import ProjectGrammarLexer
 from ProjectGrammarParser import ProjectGrammarParser
 from ProjectGrammarVisitor import ProjectGrammarVisitor
 from TypeCheckListener import TypeCheckListener
+from CodeGenListener import CodeGenListener
 import sys
 
 def main():
@@ -24,11 +25,17 @@ def main():
     walker = ParseTreeWalker()
     walker.walk(listener, tree)
 
-    print(listener.errors)
+    for error in listener.errors:
+        print('\033[91m', 'Type error:', error )
 
-    output = open('instructions.txt', 'w')
-    output.write(listener.result)
-    output.close()
+    if len(listener.errors) <= 0:
+        listener = CodeGenListener()
+        walker = ParseTreeWalker()
+        walker.walk(listener, tree)
+
+        output = open('instructions.txt', 'w')
+        output.write(listener.result)
+        output.close()
 
 if __name__ == '__main__':
     main()

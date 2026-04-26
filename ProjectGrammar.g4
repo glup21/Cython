@@ -2,7 +2,7 @@ grammar ProjectGrammar;
 
 prog: statement+;
 
-statement
+statement                                               # statement
     : ';'                                               # emptyStatement
     | primitiveType IDENTIFIER (',' IDENTIFIER)* ';'    # declaration
     | expr ';'                                          # printExpr
