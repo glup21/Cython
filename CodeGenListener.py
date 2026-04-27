@@ -25,7 +25,7 @@ class CodeGenListener(ParseTreeListener):
         # Output instructions
         self.result = ''
 
-        self.label_id = 1
+        self.label_id = 0
         self.if_stack = []
         self.pending = {}
 
@@ -72,9 +72,13 @@ class CodeGenListener(ParseTreeListener):
         res_type = Type.stringToType(ctx.primitiveType().getText())
         value = res_type.getDefaultValue()
 
+        if res_type == Type.BOOL:
+            value = 'true' if value == True else 'false'
+
         for id in ctx.IDENTIFIER():
             name = id.getText()
             self.types_table[name] = res_type 
+            
             self.addLine(f'push {res_type.toSuffix()} {value}')
             self.addLine(f'save {name}')
 
@@ -123,11 +127,8 @@ class CodeGenListener(ParseTreeListener):
         false_id = self.getLabelId()
         end_id = self.getLabelId()
         self.if_stack.append((false_id, end_id))
-
         has_else = ctx.statement(1) is not None
-
         self.pending[ctx.statement(0)] = [f'fjmp {false_id}']
-
         if has_else:
             self.pending[ctx.statement(1)] = [f'jmp {end_id}', f'label {false_id}']
 
@@ -138,12 +139,14 @@ class CodeGenListener(ParseTreeListener):
         if has_else:
             self.addLine(f'label {end_id}')
         else:
+            self.addLine(f'jmp {end_id}')
             self.addLine(f'label {false_id}')
+            self.addLine(f'label {end_id}')
 
     # Enter a parse tree produced by ProjectGrammarParser#whileStatement.
     def enterWhileStatement(self, ctx:ProjectGrammarParser.WhileStatementContext):
-        start_id = self.newLabel()
-        end_id = self.newLabel()
+        start_id = self.getLabelId()
+        end_id = self.getLabelId()
         self.if_stack.append((start_id, end_id))
 
         self.addLine(f'label {start_id}')
@@ -265,6 +268,7 @@ class CodeGenListener(ParseTreeListener):
     # Exit a parse tree produced by ProjectGrammarParser#bool.
     def exitBool(self, ctx:ProjectGrammarParser.BoolContext):
         value = ctx.getText()
+
         self.addLine(f'push B {value}')
         self.nodes_table[ctx] = Type.BOOL
 

@@ -304,7 +304,7 @@ class TypeCheckListener(ParseTreeListener):
 
     # Exit a parse tree produced by ProjectGrammarParser#not.
     def exitNot(self, ctx:ProjectGrammarParser.NotContext):
-        expr_type = self.nodes_table[ctx.expr().getText()]
+        expr_type = self.nodes_table[ctx.expr()]
 
         if expr_type != Type.BOOL:
             self.addError(ctx, 'Bool NOT operation is only applicable to boolean expressions.')
